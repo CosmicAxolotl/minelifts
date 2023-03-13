@@ -51,5 +51,11 @@ Every week there will be a new branch to commit everything to the week, this is 
 - [X] Creation of the repository.
 - [X] Create the basic core & module parsing.
 - [X] Create the `README.md`.
-- [ ] Expand `READ.md`.
-- [ ] Close Week 0.
+- [x] Expand `READ.md`.
+- [X] Close Week 0.
+
+### Week 1:
+- [ ] Finish the module manager.
+- [ ] Start the run manager.
+- [ ] Start the player manager.
+- [ ] Start developing the MVP.
