@@ -48,14 +48,27 @@ Every week there will be a new branch to commit everything to the week, this is 
 > Find here all development weeks, its goals & milestones reached.
 
 ### Week 0:
+- [X] Close Week 0.
 - [X] Creation of the repository.
 - [X] Create the basic core & module parsing.
 - [X] Create the `README.md`.
-- [x] Expand `READ.md`.
-- [X] Close Week 0.
+- [X] Expand `READ.md`.
 
 ### Week 1:
+- [X] Close Week 1.
 - [ ] Finish the module manager.
 - [ ] Start the run manager.
 - [ ] Start the player manager.
 - [ ] Start developing the MVP.
+
+(None finished)
+
+### Week 2:
+- [ ] Close Week 2.
+- [ ] Progress with `ml_week1` objectives.
+
+(Not expected to finish them by this week)
+
+### Week 3:
+- [ ] Finish `ml_week1` objectives.
+- [ ] Close Week 2.
