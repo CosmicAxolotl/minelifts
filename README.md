@@ -71,4 +71,4 @@ Every week there will be a new branch to commit everything to the week, this is 
 
 ### Week 3:
 - [ ] Finish `ml_week1` objectives.
-- [ ] Close Week 2.
+- [ ] Close Week 3.
