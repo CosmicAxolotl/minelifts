@@ -64,7 +64,7 @@ Every week there will be a new branch to commit everything to the week, this is 
 (None finished)
 
 ### Week 2:
-- [ ] Close Week 2.
+- [X Close Week 2.
 - [ ] Progress with `ml_week1` objectives.
 
 (Not expected to finish them by this week)
@@ -72,3 +72,10 @@ Every week there will be a new branch to commit everything to the week, this is 
 ### Week 3:
 - [ ] Finish `ml_week1` objectives.
 - [ ] Close Week 3.
+
+### Week 4:
+- [ ] Finish the run manager.
+- [ ] Finish the player manager.
+- [ ] Start tests with the managers.
+- [ ] Start & finish damage dealer manager.
+- [ ] Code mob `ml:mvp/dummy`.
