@@ -64,7 +64,7 @@ Every week there will be a new branch to commit everything to the week, this is 
 (None finished)
 
 ### Week 2:
-- [X Close Week 2.
+- [X] Close Week 2.
 - [ ] Progress with `ml_week1` objectives.
 
 (Not expected to finish them by this week)
