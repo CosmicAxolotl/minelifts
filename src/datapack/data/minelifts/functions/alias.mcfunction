@@ -1,2 +1,9 @@
-#alias uuid module.root MFE00A0D-0000-0000-0000-MFE00A0D
-#alias entity module.search @s[predicate=ml:generic/equal_to]
+
+#alias uuid task.root 0000000F-0000-000F-0000-002000000000
+#alias entity task.root 0000000F-0000-000F-0000-002000000000
+
+#alias uuid entity.root 0000000F-0000-000F-0000-002000000001
+#alias entity entity.root 0000000F-0000-000F-0000-002000000001
+
+#alias uuid module.root 0000000F-0000-000F-0000-002000000002
+#alias entity module.root 0000000F-0000-000F-0000-002000000002
