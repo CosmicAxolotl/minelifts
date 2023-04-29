@@ -1,4 +1,8 @@
 
+# load mspt task
+function minelifts:task/mspt
+scoreboard players set #49999000 ml.rom 49999000
+
 # Add objectives
 scoreboard objectives add ml.registry trigger
 scoreboard objectives add ml.rom trigger
