@@ -1,0 +1,23 @@
+{
+	"values":[
+		"#minecraft:stone_bricks",
+		"#minecraft:moss_replaceable",
+		"#minecraft:deepslate_ore_replaceables",
+		"minecraft:stone",
+		"minecraft:stone_stairs",
+		"minecraft:stone_slab",
+		"minecraft:diorite",
+		"minecraft:diorite_stairs",
+		"minecraft:diorite_slab",
+		"minecraft:andesite",
+		"minecraft:andesite_stairs",
+		"minecraft:andesite_slab",
+		"minecraft:grass_block",
+		"minecraft:dirt_path",
+		"minecraft:farmland",
+		"minecraft:coarse_dirt",
+		"minecraft:rooted_dirt",
+		"minecraft:mycelium",
+		"minecraft:moss_block"
+	]
+}

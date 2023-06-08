@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.tabSize": 4,
+		"datapack.env.cmdVersion": "1.20",
+		"datapack.env.dataVersion": "Latest snapshot"
+	}
+}
