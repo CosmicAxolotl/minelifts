@@ -35,7 +35,7 @@ scoreboard players set resonance.down ml.fun 1
 function classic:feature/delving/movement/resonance/loop/down
 
 # make NBT packet
-data merge storage ml:tmp {cube_faces:[I;0,0,0,0,0,0]}
+data merge storage ml:tmp {axis:[I;0,0,0,0,0,0]}
 execute store result storage ml:tmp axis[0] int 1 run scoreboard players get resonance.south ml.fun
 execute store result storage ml:tmp axis[1] int 1 run scoreboard players get resonance.north ml.fun
 execute store result storage ml:tmp axis[2] int 1 run scoreboard players get resonance.east ml.fun

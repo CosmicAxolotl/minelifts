@@ -12,6 +12,9 @@
 		"minecraft:tall_grass",
 		"minecraft:red_mushroom",
 		"minecraft:brown_mushroom",
-		"minecraft:vine"
+		"minecraft:vine",
+		"#minecraft:banners",
+		"#minecraft:standing_signs",
+		"#minecraft:wall_signs"
 	]
 }

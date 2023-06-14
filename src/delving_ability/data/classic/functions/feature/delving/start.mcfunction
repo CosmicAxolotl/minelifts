@@ -9,6 +9,8 @@ execute if score @s delving.cooldown matches 1.. run return 0
 execute if entity @s[tag=delving.inside] run return 0
 execute if entity @s[tag=delving.peek] run return 0
 
+execute unless score @s delving.cooldown = @s delving.cooldown run scoreboard players set @s delving.cooldown 0
+
 # guard-statement for on valid block condition
 tag @s remove delving.cannot_use
 execute unless block ~ ~-0.000001 ~ #classic:feature/delving/travel_blocks run tag @s add delving.cannot_use
@@ -24,11 +26,18 @@ playsound minecraft:entity.silverfish.ambient player @a ~ ~ ~ 4 1.34
 playsound minecraft:block.composter.fill player @a ~ ~ ~ 3 0.64
 playsound minecraft:entity.zombie.infect player @a ~ ~ ~ 0.5 1.19
 
+playsound minecraft:block.beacon.power_select player @s ~ ~ ~ 0.5 1.31 0.5
+playsound minecraft:block.dripstone_block.fall player @s ~ ~ ~ 2 0.57 1
+playsound minecraft:entity.silverfish.ambient player @s ~ ~ ~ 4 1.34 1
+playsound minecraft:block.composter.fill player @s ~ ~ ~ 3 0.64 1
+playsound minecraft:entity.zombie.infect player @s ~ ~ ~ 0.5 1.19 0.5
+
+
 # get player UUID (saves 1 @a selector & multiple player NBT check, which are :cringe:)
 data modify storage ml:tmp player set from entity @s UUID
 
 # summon DELVING_MARKER
-execute positioned ~ ~-1 ~ align xyz run summon block_display ~0.5 ~0.5 ~0.5 {block_state:{Name:"minecraft:air"},UUID:[I;0,0,34,5],Passengers:[{id:"minecraft:area_effect_cloud",Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["feature.delving","marker.pos"],Passengers:[{id:"minecraft:turtle",NoAI:1b,Age:-2147483648,CustomName:'{"text":"Hawksbill"}',Silent:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty",ActiveEffects:[{Id:14,ShowParticles:0b,Ambient:0b,Duration:2147483647}],Tags:["tmp","feature.delving","marker.pos"]}]}]}
+execute positioned ~ ~-1 ~ align xyz run summon block_display ~0.5 ~0.5 ~0.5 {block_state:{Name:"minecraft:air"},UUID:[I;0,0,34,5],Passengers:[{id:"minecraft:area_effect_cloud",Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["feature.delving","marker.pos"],Passengers:[{id:"minecraft:turtle",NoAI:1b,Age:-2147483648,CustomName:'{"text":"Hawksbill"}',Team:"no_collisions",Silent:1b,Invulnerable:1b,DeathLootTable:"minecraft:empty",ActiveEffects:[{Id:14,ShowParticles:0b,Ambient:0b,Duration:2147483647}],Tags:["tmp","feature.delving","marker.pos"]}]}]}
 #function classic:feature/delving/movement/resonance
 execute as 00000000-0000-0000-0000-002200000005 on passengers run data modify entity @s Owner set from storage ml:tmp player
 

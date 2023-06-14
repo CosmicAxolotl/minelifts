@@ -4,6 +4,8 @@ advancement revoke @s only classic:feature/delving/interact
 # guard-statement
 execute if score @s delving.cooldown matches 1.. run return 0
 
+execute if entity @s[tag=hit_wall] run return 0
+
 function classic:feature/delving/cube/get_numbers
 tag @s add movement.quick
 
@@ -14,6 +16,6 @@ execute if entity @s[tag=facing.east] run function classic:feature/delving/movem
 execute if entity @s[tag=facing.up] run function classic:feature/delving/movement/dig/up
 execute if entity @s[tag=facing.down] run function classic:feature/delving/movement/dig/down
 
-scoreboard players add @s[tag=!hit_wall,tag=!emerge] delving.cooldown 7
+scoreboard players add @s[tag=!hit_wall,tag=!emerge] delving.cooldown 3
 
 tag @s remove hit_wall

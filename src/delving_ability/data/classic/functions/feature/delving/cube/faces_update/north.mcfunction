@@ -13,6 +13,7 @@ execute if score face.north ml.fun matches -1 run data modify storage ml:tmp cub
 
 # EMERGE symbol 
 execute if score face.north ml.fun matches 1 run data modify storage ml:tmp cube_faces[0][0] set value '{"text":"","color":"#AFFF00"}'
+execute if score face.north ml.fun matches 1 run tag @s add can.emerge
 
 # inverse to display correct number
 execute if score face.north ml.fun matches -16..-2 run scoreboard players operation face.north ml.fun *= #-1 ml.fun

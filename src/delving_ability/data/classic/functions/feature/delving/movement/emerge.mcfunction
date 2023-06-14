@@ -1,6 +1,6 @@
 
 # set cooldown
-scoreboard players set @s delving.cooldown 15
+scoreboard players set @s delving.cooldown 32
 
 tag @s add emerge
 

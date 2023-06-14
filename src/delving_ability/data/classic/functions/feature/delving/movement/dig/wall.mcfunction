@@ -3,6 +3,7 @@
 scoreboard players set @s delving.cooldown 7
 
 tag @s add hit_wall
+tag @s remove movement.quick
 
 playsound minecraft:entity.villager.no player @s ~ ~ ~ 1 1.3
 
