@@ -19,19 +19,27 @@ execute if entity @s[tag=delving.cannot_use] run function classic:feature/delvin
 schedule function classic:feature/delving/loop 1t
 execute if entity @s[tag=delving.cannot_use] run return 0
 
+# give effects to the player
+effect give @s blindness infinite 0 true
+effect give @s invisibility infinite 0 true
+effect give @s resistance infinite 5 true
+
 # play effect to summerge
+
+stopsound @s ambient
+stopsound @s block
+stopsound @s hostile
+stopsound @s neutral
+stopsound @s player
+stopsound @s record
+stopsound @s voice
+stopsound @s weather
+
 playsound minecraft:block.beacon.power_select player @a ~ ~ ~ 0.5 1.31
 playsound minecraft:block.dripstone_block.fall player @a ~ ~ ~ 2 0.57
 playsound minecraft:entity.silverfish.ambient player @a ~ ~ ~ 4 1.34
 playsound minecraft:block.composter.fill player @a ~ ~ ~ 3 0.64
 playsound minecraft:entity.zombie.infect player @a ~ ~ ~ 0.5 1.19
-
-playsound minecraft:block.beacon.power_select player @s ~ ~ ~ 0.5 1.31 0.5
-playsound minecraft:block.dripstone_block.fall player @s ~ ~ ~ 2 0.57 1
-playsound minecraft:entity.silverfish.ambient player @s ~ ~ ~ 4 1.34 1
-playsound minecraft:block.composter.fill player @s ~ ~ ~ 3 0.64 1
-playsound minecraft:entity.zombie.infect player @s ~ ~ ~ 0.5 1.19 0.5
-
 
 # get player UUID (saves 1 @a selector & multiple player NBT check, which are :cringe:)
 data modify storage ml:tmp player set from entity @s UUID

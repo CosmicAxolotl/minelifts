@@ -19,6 +19,9 @@ tag @s[tag=emerge.up,x_rotation=25..90] remove emerge.accept
 tag @s[tag=emerge.down,x_rotation=-25..90] add emerge.accept 
 tag @s[tag=emerge.down,x_rotation=-90..-25] remove emerge.accept 
 
+tag @s add tmp
+execute unless score @s delving.cooldown matches 5..17 unless score @s delving.cooldown matches 1..3 on vehicle on origin on passengers on passengers on origin on vehicle at @s as @a[tag=tmp,limit=1] run function classic:feature/delving/movement/emerge/marker
+tag @s add tmp
 
 title @s[scores={delving.cooldown=..0}] times 5 2 5
 title @s[tag=emerge.accept,scores={delving.cooldown=..0}] subtitle [{"text":"To accept","color":"gray"}]
@@ -26,7 +29,7 @@ title @s[tag=!emerge.accept,scores={delving.cooldown=..0}] subtitle [{"text":"To
 title @s[tag=emerge.accept,scores={delving.cooldown=..0}] title [{"text":"","color":"green"},"[",{"keybind":"key.sneak"},"]"]
 title @s[tag=!emerge.accept,scores={delving.cooldown=..0}] title [{"text":"","color":"red"},"[",{"keybind":"key.sneak"},"]"]
 
-execute at @s[scores={delving.cooldown=..0}] anchored eyes run particle ash ~ ~ ~ 4 4 4 0.4 60 normal @s
+execute at @s[scores={delving.cooldown=..0}] anchored eyes run particle ash ~ ~ ~ 4 4 4 0.4 100 normal @s
 
 execute at @s run playsound minecraft:block.note_block.chime player @s[scores={delving.cooldown=..0}] ~ ~ ~ 0.1 1.66
 execute at @s run playsound minecraft:block.note_block.chime player @s[scores={delving.cooldown=..4}] ~ ~ ~ 0.1 1

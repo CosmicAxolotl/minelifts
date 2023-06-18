@@ -16,6 +16,6 @@ execute if entity @s[tag=facing.east] run function classic:feature/delving/movem
 execute if entity @s[tag=facing.up] run function classic:feature/delving/movement/dig/up
 execute if entity @s[tag=facing.down] run function classic:feature/delving/movement/dig/down
 
-scoreboard players add @s[tag=!hit_wall,tag=!emerge] delving.cooldown 3
+scoreboard players remove @s[tag=!hit_wall,tag=!emerge] delving.cooldown 3
 
 tag @s remove hit_wall

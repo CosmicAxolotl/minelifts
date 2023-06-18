@@ -15,6 +15,11 @@
 		"minecraft:vine",
 		"#minecraft:banners",
 		"#minecraft:standing_signs",
-		"#minecraft:wall_signs"
+		"#minecraft:wall_signs",
+		"minecraft:light",
+		"minecraft:torch",
+		"minecraft:soul_torch",
+		"#minecraft:flowers",
+		"#minecraft:tall_flowers"
 	]
 }

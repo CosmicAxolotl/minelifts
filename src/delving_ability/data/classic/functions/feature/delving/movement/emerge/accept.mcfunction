@@ -18,7 +18,9 @@ execute on vehicle on passengers on passengers run kill @s
 execute on vehicle on passengers run kill @s[type=!player]
 execute on vehicle run kill @s
 
-execute at @s anchored eyes run tp @s ^ ^ ^
+execute store result score is_air ml.fun at @s anchored eyes positioned ^ ^ ^ align y if block ~ ~-0.0001 ~ #classic:feature/delving/air
+execute if score is_air ml.fun matches 0 at @s anchored eyes positioned ^ ^ ^ align y run tp @s ~ ~ ~
+execute if score is_air ml.fun matches 1 at @s anchored eyes run tp @s ^ ^ ^
 
 # remove tags
 tag @s remove delving.peek
@@ -40,4 +42,7 @@ playsound minecraft:block.dripstone_block.fall player @a ~ ~ ~ 2 0.57
 playsound minecraft:entity.silverfish.ambient player @a ~ ~ ~ 4 1.34
 playsound minecraft:block.composter.fill player @a ~ ~ ~ 3 0.64
 playsound minecraft:entity.zombie.infect player @a ~ ~ ~ 0.5 1.19
+
 effect clear @s invisibility
+effect clear @s resistance
+effect give @s resistance 1 5 true

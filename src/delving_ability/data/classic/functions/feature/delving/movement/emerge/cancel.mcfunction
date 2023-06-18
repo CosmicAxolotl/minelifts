@@ -5,7 +5,18 @@ title @s times 2 6 4
 title @s subtitle {"text":"Canceled.","color":"red"}
 title @s title ""
 
+effect give @s blindness infinite 0 true
+
 scoreboard players set @s delving.cooldown 3
+
+stopsound @s ambient
+stopsound @s block
+stopsound @s hostile
+stopsound @s neutral
+stopsound @s player
+stopsound @s record
+stopsound @s voice
+stopsound @s weather
 
 playsound minecraft:block.dripstone_block.fall player @s ~ ~ ~ 99999999 0.57
 playsound minecraft:entity.silverfish.ambient player @s ~ ~ ~ 99999999 0.66

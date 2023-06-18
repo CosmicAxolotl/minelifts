@@ -10,6 +10,8 @@ tag @s[tag=facing.down] add emerge.down
 # at DELVING_MARKER as PLAYER
 execute on vehicle on origin on passengers on passengers on origin on vehicle at @s as @a[tag=tmp,limit=1] align xyz positioned ~0.5 ~0.5 ~0.5 run function classic:feature/delving/movement/emerge/tp
 
+effect clear @s blindness
+
 tag @s remove facing.north
 tag @s remove facing.south
 tag @s remove facing.west

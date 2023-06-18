@@ -18,6 +18,7 @@
 		"minecraft:coarse_dirt",
 		"minecraft:rooted_dirt",
 		"minecraft:mycelium",
-		"minecraft:moss_block"
+		"minecraft:moss_block",
+		"stone_brick_slab"
 	]
 }
