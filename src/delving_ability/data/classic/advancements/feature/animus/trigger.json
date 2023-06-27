@@ -1,0 +1,84 @@
+{
+	"criteria": {
+		"base_trigger": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:totem_of_undying"
+						],
+						"nbt": "{\"ml.classic\":[\"animus\"]}"
+					}
+				]
+			}
+		},
+		"delving": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:totem_of_undying"
+						],
+						"nbt": "{\"ml.classic\":[\"delving\"]}"
+					}
+				]
+			}
+		},
+		"mirroring": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:totem_of_undying"
+						],
+						"nbt": "{\"ml.classic\":[\"mirroring\"]}"
+					}
+				]
+			}
+		},
+		"spore_breath": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:totem_of_undying"
+						],
+						"nbt": "{\"ml.classic\":[\"spore_breath\"]}"
+					}
+				]
+			}
+		},
+		"dispersion": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:totem_of_undying"
+						],
+						"nbt": "{\"ml.classic\":[\"dispersion\"]}"
+					}
+				]
+			}
+		}
+	},
+	"requirements":[
+		[
+			"base_trigger"
+		],
+		[
+			"delving",
+			"mirroring",
+			"spore_breath",
+			"dispersion"
+		]
+	],
+	"rewards": {
+		"function": "classic:feature/animus/update"
+	},
+	"sends_telemetry_event": false
+}

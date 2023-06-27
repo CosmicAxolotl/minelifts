@@ -31,3 +31,5 @@ tag @s remove emerge.west
 tag @s remove emerge.east
 tag @s remove emerge.up
 tag @s remove emerge.down
+
+function classic:feature/delving/lock

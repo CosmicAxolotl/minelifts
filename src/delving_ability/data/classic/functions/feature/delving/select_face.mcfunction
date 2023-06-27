@@ -3,8 +3,8 @@
 execute at @s anchored eyes positioned ^ ^ ^1.25 on vehicle on origin on vehicle run tp @s ~ ~ ~
 execute at @s run playsound block.beacon.ambient player @s ~ ~ ~ 1 1.33
 
-execute if entity @s[x_rotation=-45..45] run function classic:feature/delving/cube/horizontal_faces_update
-execute if entity @s[x_rotation=45..-45] run function classic:feature/delving/cube/vertical_faces_update
+execute if entity @s[tag=!quick.merge,x_rotation=-45..45] run function classic:feature/delving/cube/horizontal_faces_update
+execute if entity @s[tag=!quick.merge,x_rotation=45..-45] run function classic:feature/delving/cube/vertical_faces_update
 
 title @s[tag=!can.emerge] actionbar ["",[{"text":"","color":"yellow","bold":true},"[",{"keybind":"key.use"},"]: "],{"text":"Quick Dig. "},[{"text":"","color":"yellow","bold":true},"[",{"keybind":"key.sneak"},"]: "],{"text":"Dig."}]
 title @s[tag=can.emerge] actionbar ["",[{"text":"","color":"yellow","bold":true},"[",{"keybind":"key.use"},"]: "],{"text":"Emerge. "}]

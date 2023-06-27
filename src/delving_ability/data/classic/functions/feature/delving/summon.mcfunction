@@ -38,20 +38,23 @@ ride @s dismount
 execute as 00000000-0000-0000-0000-002100000005 on passengers on passengers run ride @a[tag=tmp,limit=1] mount @s
 
 # create pointer MOUNT_STACK => PLAYER
-execute on vehicle on passengers run data modify entity @s[type=area_effect_cloud] Owner set from storage ml:tmp player
+execute on vehicle on passengers run data modify entity @s[type=area_effect_cloud] Owner set from storage ml:tmp player.UUID
 
 # create pointer DISPLAY_STACK => DELVING_MARKER
 execute on vehicle on origin on passengers on passengers run data modify entity @s Owner set from entity @e[type=turtle,tag=tmp,tag=feature.delving,tag=marker.pos,limit=1] UUID
 
 # create pointer DISPLAY_STACK => PLAYER
-execute on vehicle on origin on passengers run data modify entity @s[type=area_effect_cloud] Owner set from storage ml:tmp player
+execute on vehicle on origin on passengers run data modify entity @s[type=area_effect_cloud] Owner set from storage ml:tmp player.UUID
 
 # create pointer DELVING_MARKER => PLAYER
-execute as 00000000-0000-0000-0000-002200000005 on passengers run data modify entity @s Owner set from storage ml:tmp player
+execute as 00000000-0000-0000-0000-002200000005 on passengers run data modify entity @s Owner set from storage ml:tmp player.UUID
+
+execute on vehicle on origin on passengers run data modify entity @s[type=marker] data.inventory set from storage ml:tmp player.Inventory
 
 # remove tmp tags
 execute on vehicle run tag @s remove tmp
 execute on vehicle on origin run tag @s remove tmp
+execute on vehicle on origin on passengers on passengers on origin run tag @s remove tmp
 
 function classic:feature/delving/movement/resonance
 
@@ -59,3 +62,4 @@ function classic:feature/delving/movement/resonance
 tag @s add ml.delving
 tag @s add delving.inside
 tag @s add num.update
+tag @s add ml.attribute.no_pickup

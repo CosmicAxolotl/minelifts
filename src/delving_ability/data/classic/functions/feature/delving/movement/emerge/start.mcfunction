@@ -25,3 +25,5 @@ tag @s remove move
 tag @s remove movement.quick
 
 tag @s remove tmp
+
+function classic:feature/delving/lock

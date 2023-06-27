@@ -1,5 +1,6 @@
 {
 	"values":[
+		"ml:load",
 		"classic:feature/delving/load"
 	]
 }

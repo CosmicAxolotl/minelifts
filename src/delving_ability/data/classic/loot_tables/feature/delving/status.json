@@ -1,0 +1,397 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:spawner",
+					"functions": [
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{kill:1b,HideFlags:255}"
+						},
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name": {
+								"text": "Delving Status",
+								"color": "yellow",
+								"bold": true,
+								"italic": false,
+								"underlined": true,
+								"strikethrough": false,
+								"obfuscated": false
+							}
+						},
+                        {
+                            "function":"minecraft:set_lore",
+                            "entity":"this",
+                            "lore":[
+                                [
+                                    {
+                                        "text":"  The cube in front of you acts as a visual aid to help you",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    }
+                                ],
+                                {
+                                    "text":"  move around the 3D space. Each side has a number asso-",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underlined": false,
+                                    "strikethrough": false,
+                                    "obfuscated": false
+                                },
+                                {
+                                    "text":"  ciated with it, which tells you how many blocks you have",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underlined": false,
+                                    "strikethrough": false,
+                                    "obfuscated": false
+                                },
+                                {
+                                    "text":"  left to find space to emerge or an uncrossable block in",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underlined": false,
+                                    "strikethrough": false,
+                                    "obfuscated": false
+                                },
+                                [
+                                    {
+                                        "text":"  the direction of that side (e.g. the ",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    },
+                                    {
+                                        "text":"downward number",
+                                        "color":"red"
+                                    },
+                                    " tells"
+                                ],
+                                [
+                                    {
+                                        "text":"  you about the ",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    },
+                                    {
+                                        "text":"upward direction",
+                                        "color":"red"
+                                    },
+                                    "). The symbols & colours"
+                                ],
+                                {
+                                    "text":"  of the cube numbers are shown below:",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underlined": false,
+                                    "strikethrough": false,
+                                    "obfuscated": false
+                                },
+                                "",
+                                [
+                                    {
+                                        "text":" - A ",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    },
+                                    {
+                                        "text":"yellow number",
+                                        "color":"yellow"
+                                    },
+                                    " indicates that there is space to emerge"
+                                ],
+                                {
+                                    "text":"   in that direction.",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underlined": false,
+                                    "strikethrough": false,
+                                    "obfuscated": false
+                                },
+                                [
+                                    {
+                                        "text":" - An ",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    },
+                                    {
+                                        "text":"orange number",
+                                        "color":"#FFAF00"
+                                    },
+                                    " indicates that there isn't space to "
+                                ],
+                                {
+                                    "text":"   emerge in that direction.",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underlined": false,
+                                    "strikethrough": false,
+                                    "obfuscated": false
+                                },
+                                [
+                                    {
+                                        "text":" - A ",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    },
+                                    {
+                                        "text":"green arrow (\u2191)",
+                                        "color":"#7FFF00"
+                                    },
+                                    " indicates that you can emerge in that"
+                                ],
+                                [
+                                    {
+                                        "text":"   direction & ",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    },
+                                    {
+                                        "text":"peek",
+                                        "color":"yellow"
+                                    },
+                                    " outside."
+                                ],
+                                [
+                                    {
+                                        "text":" - A ",
+                                        "color": "gray",
+                                        "bold": false,
+                                        "italic": false,
+                                        "underlined": false,
+                                        "strikethrough": false,
+                                        "obfuscated": false
+                                    },
+                                    {
+                                        "text":"red saltire cross (\u2716)",
+                                        "color":"#F00000"
+                                    },
+                                    " indicates that you can't emerge"
+                                ],
+                                {
+                                    "text":"   in that direction.",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underlined": false,
+                                    "strikethrough": false,
+                                    "obfuscated": false
+                                }
+                            ]
+                        }
+					]
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:value_check",
+					"value": {
+						"type": "minecraft:score",
+						"target": {
+							"type": "minecraft:fixed",
+							"name": "status"
+						},
+						"score": "ml.fun"
+					},
+					"range": 0
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"weight": 49,
+					"name": "minecraft:ender_eye"
+				},
+				{
+					"type": "minecraft:item",
+					"weight": 1,
+					"name": "minecraft:axolotl_bucket"
+				}
+			],
+			"functions": [
+				{
+					"function": "minecraft:set_nbt",
+					"tag": "{kill:1b,HideFlags:256}"
+				},
+				{
+					"function": "minecraft:set_name",
+					"entity": "this",
+					"name": {
+						"text": "Peeking Status",
+						"color": "yellow",
+						"bold": true,
+						"italic": false,
+						"underlined": true,
+						"strikethrough": false,
+						"obfuscated": false
+					}
+				},
+                {
+                    "function": "minecraft:set_lore",
+                    "entity": "this",
+                    "lore": [
+                        {
+                            "text":"  This is a preview of where you will emerge before you",
+                            "color": "gray",
+                            "bold": false,
+                            "italic": false,
+                            "underlined": false,
+                            "strikethrough": false,
+                            "obfuscated": false
+                        },
+                        {
+                            "text":"  accept. It also works as a method of looking at the ",
+                            "color": "gray",
+                            "bold": false,
+                            "italic": false,
+                            "underlined": false,
+                            "strikethrough": false,
+                            "obfuscated": false
+                        },
+                        [
+                            {
+                                "text":"  surroundings to ",
+                                "color": "gray",
+                                "bold": false,
+                                "italic": false,
+                                "underlined": false,
+                                "strikethrough": false,
+                                "obfuscated": false
+                            },
+                            {
+                                "text":"locate yourself",
+                                "color":"yellow"
+                            },
+                            ". Particles will appear"
+                        ],
+                        {
+                            "text":"  around the block you were in, their colours & meaning",
+                            "color": "gray",
+                            "bold": false,
+                            "italic": false,
+                            "underlined": false,
+                            "strikethrough": false,
+                            "obfuscated": false
+                        },
+                        {
+                            "text":"  are shown below:",
+                            "color": "gray",
+                            "bold": false,
+                            "italic": false,
+                            "underlined": false,
+                            "strikethrough": false,
+                            "obfuscated": false
+                        },
+                        "",
+                        [
+                            {
+                                "text":" - ",
+                                "color": "gray",
+                                "bold": false,
+                                "italic": false,
+                                "underlined": false,
+                                "strikethrough": false,
+                                "obfuscated": false
+                            },
+                            {
+                                "text":"Red particles",
+                                "color":"#FF0000"
+                            },
+                            " mean that if you use the sneak keybind,"
+                        ],
+                        {
+                            "text":"    you will cancel & return inside the block.",
+                            "color": "gray",
+                            "bold": false,
+                            "italic": false,
+                            "underlined": false,
+                            "strikethrough": false,
+                            "obfuscated": false
+                        },
+                        [
+                            {
+                                "text":" - ",
+                                "color": "gray",
+                                "bold": false,
+                                "italic": false,
+                                "underlined": false,
+                                "strikethrough": false,
+                                "obfuscated": false
+                            },
+                            {
+                                "text":"Green particles",
+                                "color":"#00FF00"
+                            },
+                            " mean that if you use the sneak key-"
+                        ],
+                        {
+                            "text":"   bind, you will accept & exit the block.",
+                            "color": "gray",
+                            "bold": false,
+                            "italic": false,
+                            "underlined": false,
+                            "strikethrough": false,
+                            "obfuscated": false
+                        }
+                    ]
+                }
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:value_check",
+					"value": {
+						"type": "minecraft:score",
+						"target": {
+							"type": "minecraft:fixed",
+							"name": "status"
+						},
+						"score": "ml.fun"
+					},
+					"range": 1
+				}
+			]
+		}
+	]
+    
+}
