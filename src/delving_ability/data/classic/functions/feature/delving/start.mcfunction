@@ -39,6 +39,8 @@ execute if score sneaking ml.fun matches 0 run tellraw @s[tag=!animus.delving.hi
 execute if score sneaking ml.fun matches 1 run tag @s add quick.emerge
 
 # give effects to the player
+effect clear @s speed
+effect clear @s jump_boost
 effect give @s blindness infinite 0 true
 effect give @s invisibility infinite 0 true
 effect give @s resistance infinite 5 true
@@ -90,3 +92,4 @@ function classic:feature/delving/lock
 kill 00000000-0000-0000-0000-002000000005
 kill 00000000-0000-0000-0000-002100000005
 kill 00000000-0000-0000-0000-002200000005
+tag @s remove emerge.particles
