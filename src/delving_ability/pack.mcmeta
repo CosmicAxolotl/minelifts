@@ -1,6 +1,14 @@
 {
     "pack":{
-        "pack_format":15,
-        "description":"Delving Ability"
+        "pack_format":18,
+        "description":[
+            "", [
+                "",
+                {"text":"  dvg_abl","color":"gray","italic":true}
+            ],
+            "\n", [
+                {"text":"ml.classic.dvg_abl module","color":"dark_gray","italic":true}
+            ]
+        ]
     }
 }
