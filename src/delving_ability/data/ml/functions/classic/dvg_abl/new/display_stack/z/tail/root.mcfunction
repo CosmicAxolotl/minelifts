@@ -26,3 +26,4 @@ ride @e[type=block_display,distance=..0.0001,tag=tmp,tag=dlv_abl.tail_member.ori
 
 execute on passengers run function ml:classic/dvg_abl/new/display_stack/z/tail/member_1
 
+function ml:gnr/method/get/uuid

@@ -13,7 +13,7 @@
 # ========================================================================================================================
 
 summon block_display ~ ~ ~ {                                                        \
-    Tags:["class.ml.classic.dlv_abl.cage"],                                         \
+    Tags:["class.ml.classic.dlv_abl.cage", "tmp"],                                  \
     teleport_duration: 0,                                                           \
     Passengers: [                                                                   \
         {                                                                           \
@@ -126,5 +126,8 @@ summon block_display ~ ~ ~ {                                                    
         }                                                                           \
     ]                                                                               \
 }
+
+execute as @e[type=block_display,tag=tmp,tag=class.ml.classic.dlv_abl.cage,limit=1] run function ml:gnr/method/get/uuid
+tag @e[type=block_display,tag=class.ml.classic.dlv_abl.cage] remove tmp
 
 # ========================================================================================================================
