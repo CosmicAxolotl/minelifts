@@ -1,0 +1,12 @@
+{
+    "function":"set_name",
+    "entity": "this",
+    "name": {
+        "clickEvent": {
+            "action": "suggest_command",
+            "value":""
+        },
+        "insertion": "",
+        "selector": "@s"
+    }
+}
