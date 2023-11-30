@@ -6,6 +6,7 @@ summon block_display ~ ~ ~ {                                                    
         Name: "minecraft:yellow_wool"                                               \
     },                                                                              \
     Tags:["dlv_abl.tail_member","tmp"],                                             \
+    interpolation_duration: 8,                                                      \
     teleport_duration: 1,                                                           \
     transformation: {                                                               \
         right_rotation:[0.0f,0.0f,0.0f,1.0f],                                       \

@@ -16,5 +16,6 @@ function ml:gnr/method/get/uuid
 data modify storage ca:dvg_abl/tmp object.player set from storage ca: output.uuid
 
 function ml:classic/dvg_abl/new/z/instance with storage ca: output
+tag @s add changed.selected_face
 
 # ========================================================================================================================

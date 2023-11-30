@@ -127,18 +127,23 @@ summon block_display ~ ~ ~ {                                                    
         {                                                                           \
             id: "minecraft:block_display",                                          \
             Tags: ["select.face"],                                                  \
-            block_state: {Name:"minecraft:lime_stained_glass"},                     \
+            block_state: {Name:"minecraft:lime_stained_glass"},                          \
             alignment: "center",                                                    \
             background: 0,                                                          \
             shadow: true,                                                           \
             teleport_duration: 1,                                                   \
-            interpolation_duration: 4,                                              \
             transformation: {                                                       \
                 right_rotation:[-0.7071067811865475f,0.0f,0.0f,0.7071067811865475f],\
                 left_rotation: [0.0f,0.0f,0.0f,1.0f],                               \
-                translation: [-0.25f,0.2501f,0.25f],                                \
+                translation: [-0.25f,0.2409f,0.25f],                                \
                 scale: [0.5f,0.0f,0.5f]                                             \
-            }                                                                       \
+            },                                                                      \
+            brightness: {                                                           \
+                sky: 15,                                                            \
+                block: 15                                                           \
+            },                                                                      \
+            Glowing: true,\
+            glow_color_override: 7335955\
         }                                                                           \
     ]                                                                               \
 }
@@ -147,6 +152,3 @@ execute as @e[type=block_display,tag=tmp,tag=class.ml.classic.dlv_abl.cage,limit
 tag @e[type=block_display,tag=class.ml.classic.dlv_abl.cage] remove tmp
 
 # ========================================================================================================================
-
-
-summon block_display ~ ~ ~ {Tags:["select.face"],block_state:{Name:"minecraft:lime_stained_glass"},teleport_duration: 1,interpolation_duration: 2,transformation: {right_rotation:[-0.7071067811865475f,0.0f,0.0f,0.7071067811865475f],left_rotation: [0.0f,0.0f,0.0f,1.0f],translation: [-0.25f,0.2501f,-0.25f],scale: [0.25f,0.0f,0.25f]}}
