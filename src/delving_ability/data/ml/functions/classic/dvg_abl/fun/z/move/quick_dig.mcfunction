@@ -1,0 +1,2 @@
+
+say quick_dig

@@ -45,7 +45,8 @@ summon block_display ~ ~ ~ {                                                    
                 left_rotation: [0.0f,0.0f,0.0f,1.0f],                               \
                 translation: [0.0f,-0.122f,0.251f],                                 \
                 scale: [0.8f,0.8f,0.8f]                                             \
-            }                                                                       \
+            },                                                                      \
+            CustomName:'"face.south"'                                               \
         },                                                                          \
         {                                                                           \
             id: "minecraft:text_display",                                           \
@@ -60,7 +61,8 @@ summon block_display ~ ~ ~ {                                                    
                 left_rotation: [0.0f,0.0f,0.0f,1.0f],                               \
                 translation: [0.0f,-0.122f,-0.251f],                                \
                 scale: [0.8f,0.8f,0.8f]                                             \
-            }                                                                       \
+            },                                                                      \
+            CustomName:'"face.north"'                                               \
         },                                                                          \
         {                                                                           \
             id: "minecraft:text_display",                                           \
@@ -75,7 +77,8 @@ summon block_display ~ ~ ~ {                                                    
                 left_rotation: [0.0f,0.0f,0.0f,1.0f],                               \
                 translation: [-0.251f,-0.122f,0.0f],                                \
                 scale: [0.8f,0.8f,0.8f]                                             \
-            }                                                                       \
+            },                                                                      \
+            CustomName:'"face.west"'                                                \
         },                                                                          \
         {                                                                           \
             id: "minecraft:text_display",                                           \
@@ -90,7 +93,8 @@ summon block_display ~ ~ ~ {                                                    
             left_rotation: [0.0f,0.0f,0.0f,1.0f],                                   \
             translation: [0.251f,-0.122f,0.0f],                                     \
             scale: [0.8f,0.8f,0.8f]                                                 \
-            }                                                                       \
+            },                                                                      \
+            CustomName:'"face.east"'                                                \
         },                                                                          \
         {                                                                           \
             id: "minecraft:text_display",                                           \
@@ -106,7 +110,8 @@ summon block_display ~ ~ ~ {                                                    
                 left_rotation: [0.0f,0.0f,0.0f,1.0f],                               \
                 translation: [0.0f,-0.251f,-0.122f],                                \
                 scale: [0.8f,0.8f,0.8f]                                             \
-            }                                                                       \
+            },                                                                      \
+            CustomName:'"face.down"'                                                \
         },                                                                          \
         {                                                                           \
             id: "minecraft:text_display",                                           \
@@ -122,7 +127,8 @@ summon block_display ~ ~ ~ {                                                    
                 left_rotation: [0.0f,0.0f,0.0f,1.0f],                               \
                 translation: [0.0f,0.251f,0.122f],                                  \
                 scale: [0.8f,0.8f,0.8f]                                             \
-            }                                                                       \
+            },                                                                      \
+            CustomName:'"face.up"'                                                  \
         },                                                                          \
         {                                                                           \
             id: "minecraft:block_display",                                          \

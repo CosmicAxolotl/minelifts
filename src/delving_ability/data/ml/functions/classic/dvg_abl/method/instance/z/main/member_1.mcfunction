@@ -1,5 +1,5 @@
 
-data modify storage ca:tmp tmp set value {}
+data modify storage ca:tmp tmp set value {interpolation_duration:-1}
 
 execute if data storage ca: tmp{move:"north"} run data modify storage ca:tmp tmp.transformation set value {     \
     right_rotation:[0.0f,0.0f,0.0f,1.0f],                                                                   \
@@ -63,19 +63,44 @@ execute if score #$.tmp.face.steps ml.classic.dlv_abl.fun matches 0 run data mod
     glow_color_override: 1710618\
 }
 
-execute on vehicle on passengers if entity @s[tag=face.north,tag=previously_selected_face] run data modify entity @s text merge value '{"score":{{"objective":"ml.classic.dlv_abl.fun","name":"#$.tmp.face.north"}}'
-execute on vehicle on passengers if entity @s[tag=face.south,tag=previously_selected_face] run data modify entity @s text merge value '{"score":{{"objective":"ml.classic.dlv_abl.fun","name":"#$.tmp.face.south"}}'
-execute on vehicle on passengers if entity @s[tag=face.east,tag=previously_selected_face] run data modify entity @s text merge value '{"score":{{"objective":"ml.classic.dlv_abl.fun","name":"#$.tmp.face.west"}}'
-execute on vehicle on passengers if entity @s[tag=face.west,tag=previously_selected_face] run data modify entity @s text merge value '{"score":{{"objective":"ml.classic.dlv_abl.fun","name":"#$.tmp.face.east"}}'
-execute on vehicle on passengers if entity @s[tag=face.down,tag=previously_selected_face] run data modify entity @s text merge value '{"score":{{"objective":"ml.classic.dlv_abl.fun","name":"#$.tmp.face.up"}}'
-execute on vehicle on passengers if entity @s[tag=face.up,tag=previously_selected_face] run data modify entity @s text merge value '{"score":{{"objective":"ml.classic.dlv_abl.fun","name":"#$.tmp.face.down"}}'
+
+execute if score #$.tmp.face.steps ml.classic.dlv_abl.fun matches 1 run data modify storage ca:tmp tmp2.text set value '{"text":"↑","color":"#6FF013"}'
+
+execute if score #$.tmp.face.steps ml.classic.dlv_abl.fun matches -1 run data modify storage ca:tmp tmp2.text set value '{"text":"✖","color":"#F01313"}'
 
 
-execute if score #$.tmp.face.steps ml.classic.dlv_abl.fun matches 1 run data modify storage ca:tmp tmp2.text set value '{"text":"↑"}'
 
-execute if score #$.tmp.face.steps ml.classic.dlv_abl.fun matches -1 run data modify storage ca:tmp tmp2.text set value '{"text":"✖"}'
+scoreboard players set #.$condition ml.classic.dlv_abl.fun 0
+execute on vehicle on passengers if entity @s[tag=previously_selected_face] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_4
 
-execute unless score #$.tmp.face.steps ml.classic.dlv_abl.fun matches -1 unless score #$.tmp.face.steps ml.classic.dlv_abl.fun matches 1 run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_1
+
+
+execute if score #$.tmp.face.south ml.classic.dlv_abl.fun matches ..-1 run \
+    scoreboard players operation #$.tmp.face.south ml.classic.dlv_abl.fun *= #-1 ml.classic.dlv_abl.fun
+
+execute if score #$.tmp.face.north ml.classic.dlv_abl.fun matches ..-1 run \
+    scoreboard players operation #$.tmp.face.north ml.classic.dlv_abl.fun *= #-1 ml.classic.dlv_abl.fun
+
+execute if score #$.tmp.face.west ml.classic.dlv_abl.fun matches ..-1 run \
+    scoreboard players operation #$.tmp.face.west ml.classic.dlv_abl.fun *= #-1 ml.classic.dlv_abl.fun
+
+execute if score #$.tmp.face.east ml.classic.dlv_abl.fun matches ..-1 run \
+    scoreboard players operation #$.tmp.face.east ml.classic.dlv_abl.fun *= #-1 ml.classic.dlv_abl.fun
+
+execute if score #$.tmp.face.up ml.classic.dlv_abl.fun matches ..-1 run \
+    scoreboard players operation #$.tmp.face.up ml.classic.dlv_abl.fun *= #-1 ml.classic.dlv_abl.fun
+
+execute if score #$.tmp.face.down ml.classic.dlv_abl.fun matches ..-1 run \
+    scoreboard players operation #$.tmp.face.down ml.classic.dlv_abl.fun *= #-1 ml.classic.dlv_abl.fun
+
+
+
+
+execute unless score #$.tmp.face.steps ml.classic.dlv_abl.fun matches -1..1 run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_1
+
+
+execute unless score #.$condition ml.classic.dlv_abl.fun matches 1 on vehicle on passengers if entity @s[tag=previously_selected_face] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_3
+
 
 execute if data storage ca: tmp{move:"south"} on vehicle on passengers run tag @s[tag=face.north] add previously_selected_face
 execute if data storage ca: tmp{move:"north"} on vehicle on passengers run tag @s[tag=face.south] add previously_selected_face
@@ -85,13 +110,13 @@ execute if data storage ca: tmp{move:"up"} on vehicle on passengers run tag @s[t
 execute if data storage ca: tmp{move:"down"} on vehicle on passengers run tag @s[tag=face.up] add previously_selected_face
 
 
-execute if data storage ca: tmp{move:"south"} on vehicle on passengers if entity @s[tag=face.north] run data modify entity @s {} merge from storage ca:tmp tmp2
-execute if data storage ca: tmp{move:"north"} on vehicle on passengers if entity @s[tag=face.south] run data modify entity @s {} merge from storage ca:tmp tmp2
-execute if data storage ca: tmp{move:"west"} on vehicle on passengers if entity @s[tag=face.east] run data modify entity @s {} merge from storage ca:tmp tmp2
-execute if data storage ca: tmp{move:"east"} on vehicle on passengers if entity @s[tag=face.west] run data modify entity @s {} merge from storage ca:tmp tmp2
-execute if data storage ca: tmp{move:"up"} on vehicle on passengers if entity @s[tag=face.down] run data modify entity @s {} merge from storage ca:tmp tmp2
-execute if data storage ca: tmp{move:"down"} on vehicle on passengers if entity @s[tag=face.up] run data modify entity @s {} merge from storage ca:tmp tmp2
+execute if data storage ca: tmp{move:"south"} on vehicle on passengers if entity @s[tag=face.north] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_2
+execute if data storage ca: tmp{move:"north"} on vehicle on passengers if entity @s[tag=face.south] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_2
+execute if data storage ca: tmp{move:"west"} on vehicle on passengers if entity @s[tag=face.east] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_2
+execute if data storage ca: tmp{move:"east"} on vehicle on passengers if entity @s[tag=face.west] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_2
+execute if data storage ca: tmp{move:"up"} on vehicle on passengers if entity @s[tag=face.down] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_2
+execute if data storage ca: tmp{move:"down"} on vehicle on passengers if entity @s[tag=face.up] run function ml:classic/dvg_abl/method/instance/z/main/member_1/member_2
+
 
 data modify entity @s {} merge from storage ca:tmp tmp
 
-tag @s add previously_selected_face
