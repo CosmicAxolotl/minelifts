@@ -19,6 +19,8 @@ data modify storage ca:ram stack[-1].reference_list.tail set from storage ca:ram
 
 # =========================================================================================================================
 
+function ca:dvg_abl/instance/method/private/tail_resize with storage ca:ram stack[-1].reference_list
+
 data remove storage ca:ram stack[-1].uuid
 data modify storage ca:ram stack[-2] merge from storage ca:ram stack[-1]
 

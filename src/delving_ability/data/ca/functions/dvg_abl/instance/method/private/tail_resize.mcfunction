@@ -1,13 +1,15 @@
 
 # =========================================================================================================================
 
-scoreboard players operation #$collision ca.dvg_abl.fun = @s ca.dvg_abl.tail.member
-execute on vehicle on passengers if score @s ca.dvg_abl.tail.member < #$collision ca.dvg_abl.fun run kill @s
-
-execute on vehicle on passengers run scoreboard players operation @s ca.dvg_abl.tail.member -= #$collision ca.dvg_abl.fun
+function ca:gnr_lay/new/int
 
 # =========================================================================================================================
 
-return 1
+$execute as $(tail) at @s run function ca:dvg_abl/instance/method/private/tail_resize/as_tail
 
 # =========================================================================================================================
+
+function ca:gnr_lay/delete/int
+
+# =========================================================================================================================
+
