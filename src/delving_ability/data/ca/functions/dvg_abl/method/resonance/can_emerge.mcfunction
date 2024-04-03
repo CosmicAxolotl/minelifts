@@ -1,13 +1,8 @@
 
 # =========================================================================================================================
 
-$execute as $(cage) on passengers run kill @s
-$kill $(cage)
+execute if block ~ ~ ~ #ca:dvg_abl/air run return 1
 
-$execute as $(tail) on passengers run kill @s
-$kill $(tail)
-
-$kill $(interaction)
-$kill $(vehicle)
+return fail
 
 # =========================================================================================================================

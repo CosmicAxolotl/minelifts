@@ -13,6 +13,8 @@ function ca:dvg_abl/instance/destructor/kill with storage ca:ram stack[-1].refer
 
 function ca:dvg_abl/instance/del/reference_list
 
+scoreboard players reset @s ca.dvg_abl.fun
+
 function ca:gnr_lay/delete/ext
 
 # =========================================================================================================================

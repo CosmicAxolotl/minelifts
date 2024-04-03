@@ -1,13 +1,8 @@
 
 # =========================================================================================================================
 
-$execute as $(cage) on passengers run kill @s
-$kill $(cage)
+execute unless entity @e[type=item_display,tag=dvg_abl.vehicle,distance=..32,limit=1] run return run tp @s ~ ~ ~
 
-$execute as $(tail) on passengers run kill @s
-$kill $(tail)
-
-$kill $(interaction)
-$kill $(vehicle)
+execute positioned ~ ~32 ~ run function ca:dvg_abl/instance/method/private/posiionate
 
 # =========================================================================================================================

@@ -1,13 +1,7 @@
 
 # =========================================================================================================================
 
-$execute as $(cage) on passengers run kill @s
-$kill $(cage)
-
-$execute as $(tail) on passengers run kill @s
-$kill $(tail)
-
-$kill $(interaction)
-$kill $(vehicle)
+ride @s dismount
+$ride @s mount $(vehicle)
 
 # =========================================================================================================================

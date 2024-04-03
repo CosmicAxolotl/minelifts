@@ -1,13 +1,6 @@
 
 # =========================================================================================================================
 
-$execute as $(cage) on passengers run kill @s
-$kill $(cage)
-
-$execute as $(tail) on passengers run kill @s
-$kill $(tail)
-
-$kill $(interaction)
-$kill $(vehicle)
+$execute positioned $(x) $(y) $(z) run function ca:dvg_abl/method/pivot/resonance/pivot_iterations
 
 # =========================================================================================================================

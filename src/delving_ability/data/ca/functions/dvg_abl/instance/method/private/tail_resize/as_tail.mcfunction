@@ -61,7 +61,7 @@ scoreboard players operation #$size_max ca.dvg_abl.fun > #$size.z ca.dvg_abl.fun
 
 # =========================================================================================================================
 
-scoreboard players set #$block_scale ca.dvg_abl.fun 0250000000
+scoreboard players set #$block_scale ca.dvg_abl.fun 0500000000
 
 scoreboard players operation #$block_scale ca.dvg_abl.fun /= #$size_max ca.dvg_abl.fun 
 

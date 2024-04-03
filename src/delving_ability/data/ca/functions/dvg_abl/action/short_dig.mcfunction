@@ -1,13 +1,9 @@
 
 # =========================================================================================================================
 
-$execute as $(cage) on passengers run kill @s
-$kill $(cage)
+scoreboard players set @s ca.dvg_abl.cooldown 6
 
-$execute as $(tail) on passengers run kill @s
-$kill $(tail)
-
-$kill $(interaction)
-$kill $(vehicle)
+scoreboard players set #$steps ca.dvg_abl.fun 1
+function ca:dvg_abl/instance/method/move
 
 # =========================================================================================================================

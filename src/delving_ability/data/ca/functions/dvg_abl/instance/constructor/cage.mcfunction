@@ -74,8 +74,8 @@ data modify storage ca:ram stack[-1].faces[5].billboard set value "vertical"
 data modify storage ca:ram stack[-1].entity_nbt set value {UUID:[I;0,0,0,4]}
 
 data modify storage ca:ram stack[-1].entity_nbt.Passengers set from storage ca:ram stack[-1].faces
-data modify storage ca:ram stack[-1].entity_nbt.Passengers append value {id:"minecraft:block_display",height:0.5f,width:0.5f,interpolation_duration:0,teleport_duration:1,block_state:{Name:"minecraft:spawner"},transformation:{right_rotation:[0.0f,0.0f,0.0f,1.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[-0.25f,-0.25f,-0.25f],scale:[0.5f,0.5f,0.5f]}}
-data modify storage ca:ram stack[-1].entity_nbt.Passengers append value {id:"minecraft:block_display",Tags:["select.face"],height:0.5f,width:0.5f,interpolation_duration:0,teleport_duration:1,Glowing:true,glow_color_override:7335955,brightness:{sky:15,block:15},block_state:{Name:"minecraft:lime_stained_glass"},transformation:{right_rotation:[-0.7071067811865475f,0.0f,0.0f,0.7071067811865475f],left_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[-0.25f,0.2409f,0.25f],scale:[0.5f,0.0f,0.5f]}}
+data modify storage ca:ram stack[-1].entity_nbt.Passengers append value {id:"minecraft:block_display",Tags:["not_a_face"],height:0.5f,width:0.5f,interpolation_duration:0,teleport_duration:1,block_state:{Name:"minecraft:spawner"},transformation:{right_rotation:[0.0f,0.0f,0.0f,1.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[-0.25f,-0.25f,-0.25f],scale:[0.5f,0.5f,0.5f]}}
+data modify storage ca:ram stack[-1].entity_nbt.Passengers append value {id:"minecraft:block_display",Tags:["not_a_face","select.face"],height:0.5f,width:0.5f,interpolation_duration:0,teleport_duration:1,Glowing:true,glow_color_override:7335955,brightness:{sky:15,block:15},block_state:{Name:"minecraft:lime_stained_glass"},transformation:{right_rotation:[-0.7071067811865475f,0.0f,0.0f,0.7071067811865475f],left_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[-0.25f,0.2409f,0.25f],scale:[0.5f,0.0f,0.5f]}}
 
 
 function ca:dvg_abl/instance/constructor/cage_stack_members with storage ca:ram stack[-1]

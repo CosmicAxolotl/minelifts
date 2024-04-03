@@ -1,13 +1,7 @@
 
 # =========================================================================================================================
 
-$execute as $(cage) on passengers run kill @s
-$kill $(cage)
-
-$execute as $(tail) on passengers run kill @s
-$kill $(tail)
-
-$kill $(interaction)
-$kill $(vehicle)
+data merge entity @s {height:1.0f,width:1.0f}
+return 1
 
 # =========================================================================================================================

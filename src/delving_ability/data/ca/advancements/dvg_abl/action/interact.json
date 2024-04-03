@@ -1,0 +1,28 @@
+{
+	"criteria": {
+		"attack_action": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"player": [],
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:interaction"
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"attack_action"
+		]
+	],
+	"rewards": {
+		"function": "ca:dvg_abl/action/interact"
+	},
+	"sends_telemetry_event": false
+}
