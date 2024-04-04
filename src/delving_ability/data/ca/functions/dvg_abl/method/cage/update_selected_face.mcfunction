@@ -76,6 +76,7 @@ execute if entity @s[tag=dvg_abl.facing.up] run data modify storage ca:ram stack
 # =========================================================================================================================
 
 $execute as $(cage) run function ca:dvg_abl/method/cage/update_selected_face/as_cage
+$execute as $(tail) on passengers run function ca:dvg_abl/method/cage/update_selected_face/update_head
 
 # =========================================================================================================================
 

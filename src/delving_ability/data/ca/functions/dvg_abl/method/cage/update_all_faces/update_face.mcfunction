@@ -16,17 +16,19 @@ data modify storage ca:ram stack[-1].text set value []
 
 # =========================================================================================================================
 
-execute if score #$steps ca.dvg_abl.fun matches 17.. run data modify storage ca:ram stack[-1].text append value '{"text":"+16"}'
-execute if score #$steps ca.dvg_abl.fun matches ..-17 run data modify storage ca:ram stack[-1].text append value '{"text":"+16"}'
+execute if score #$steps ca.dvg_abl.fun matches 18.. run data modify storage ca:ram stack[-1].text append value '{"text":"+16"}'
+execute if score #$steps ca.dvg_abl.fun matches ..-18 run data modify storage ca:ram stack[-1].text append value '{"text":"+16"}'
 
-execute if score #$steps ca.dvg_abl.fun matches 2..16 run data modify storage ca:ram stack[-1].text append value '{"score":{"name":"#$steps","objective":"ca.dvg_abl.fun"}}'
-execute if score #$steps ca.dvg_abl.fun matches -16..-2 run data modify storage ca:ram stack[-1].text append value '{"score":{"name":"#$steps","objective":"ca.dvg_abl.fun"}}'
+execute if score #$steps ca.dvg_abl.fun matches 2..17 run data modify storage ca:ram stack[-1].text append value '{"score":{"name":"#$steps","objective":"ca.dvg_abl.fun"}}'
+execute if score #$steps ca.dvg_abl.fun matches -17..-2 run data modify storage ca:ram stack[-1].text append value '{"score":{"name":"#$steps","objective":"ca.dvg_abl.fun"}}'
 
-execute if score #$steps ca.dvg_abl.fun matches 1 run data modify storage ca:ram stack[-1].text append value '{"text":"↑"}'
+execute if score #$steps ca.dvg_abl.fun matches 1 run data modify storage ca:ram stack[-1].text append value '{"text":"⛏"}'
 execute if score #$steps ca.dvg_abl.fun matches -1 run data modify storage ca:ram stack[-1].text append value '{"text":"✖"}'
 
 scoreboard players set #-1 ca.dvg_abl.fun -1
 execute if score #$steps ca.dvg_abl.fun matches ..-1 run scoreboard players operation #$steps ca.dvg_abl.fun *= #-1 ca.dvg_abl.fun
+
+scoreboard players remove #$steps ca.dvg_abl.fun 1
 
 data merge entity @s {text:'{"nbt":"stack[-1].text[]","separator":"","storage":"ca:ram","interpret":true}'}
 

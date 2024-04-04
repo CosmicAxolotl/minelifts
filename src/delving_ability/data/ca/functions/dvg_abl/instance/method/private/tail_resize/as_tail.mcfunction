@@ -61,12 +61,12 @@ scoreboard players operation #$size_max ca.dvg_abl.fun > #$size.z ca.dvg_abl.fun
 
 # =========================================================================================================================
 
-scoreboard players set #$block_scale ca.dvg_abl.fun 0500000000
+scoreboard players set #$block_scale ca.dvg_abl.fun 050000000
 
 scoreboard players operation #$block_scale ca.dvg_abl.fun /= #$size_max ca.dvg_abl.fun 
 
-execute store result storage ca:ram stack[-1].block_scale float 0.000000001 run scoreboard players get #$block_scale ca.dvg_abl.fun
-execute store result storage ca:ram stack[-1].scale float 0.0000000001 run scoreboard players get #$block_scale ca.dvg_abl.fun
+execute store result storage ca:ram stack[-1].block_scale float 0.00000001 run scoreboard players get #$block_scale ca.dvg_abl.fun
+execute store result storage ca:ram stack[-1].scale float 0.000000001 run scoreboard players get #$block_scale ca.dvg_abl.fun
 
 # =========================================================================================================================
 

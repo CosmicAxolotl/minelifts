@@ -1,7 +1,7 @@
 
 # =========================================================================================================================
 
-data merge entity @s {block_state:{Name:"minecraft:yellow_wool"},interpolation_duration:8,teleport_duration:1,transformation:{right_rotation:[0.0f,0.0f,0.0f,1.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[0.0f,0.0f,0.0f]}}
+data merge entity @s {block_state:{Name:"minecraft:gray_stained_glass"},interpolation_duration:8,teleport_duration:1,transformation:{right_rotation:[0.0f,0.0f,0.0f,1.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],translation:[0.0f,0.0f,0.0f],scale:[0.0f,0.0f,0.0f]},glow_color_override:10331808}
 
 scoreboard players set @s ca.dvg_abl.tail.member -1
 
