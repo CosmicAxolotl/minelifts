@@ -62,7 +62,7 @@ function ca:dvg_abl/method/pivot/resonance
 
 # =========================================================================================================================
 
-execute on vehicle positioned ~ ~512 ~ run function ca:dvg_abl/instance/method/private/posiionate
+execute on vehicle positioned ~ ~512 ~ run function ca:dvg_abl/instance/method/private/positionate
 
 function ca:gnr_lay/delete/ext
 
