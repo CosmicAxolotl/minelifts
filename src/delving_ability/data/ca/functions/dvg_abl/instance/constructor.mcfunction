@@ -6,19 +6,27 @@ function ca:gnr_lay/new/int
 # =========================================================================================================================
 
 function ca:gnr/get_uuid
-data modify storage ca:ram stack[-1].reference_list.player set from storage ca:ram stack[-1].uuid
+    data modify storage ca:ram stack[-1].reference_list.player set from storage ca:ram stack[-1].uuid
+
 
 execute summon item_display run function ca:gnr/get_uuid
-data modify storage ca:ram stack[-1].reference_list.vehicle set from storage ca:ram stack[-1].uuid
+    data modify storage ca:ram stack[-1].reference_list.vehicle set from storage ca:ram stack[-1].uuid
+
 
 execute summon item_display if function ca:dvg_abl/instance/constructor/cage run function ca:gnr/get_uuid
-data modify storage ca:ram stack[-1].reference_list.cage set from storage ca:ram stack[-1].uuid
+    data modify storage ca:ram stack[-1].reference_list.cage set from storage ca:ram stack[-1].uuid
+
+
+execute summon item_display if function ca:dvg_abl/instance/constructor/wind_rose run function ca:gnr/get_uuid
+    data modify storage ca:ram stack[-1].reference_list.wind_rose set from storage ca:ram stack[-1].uuid
+
 
 execute summon item_display if function ca:dvg_abl/instance/constructor/tail run function ca:gnr/get_uuid
-data modify storage ca:ram stack[-1].reference_list.tail set from storage ca:ram stack[-1].uuid
+    data modify storage ca:ram stack[-1].reference_list.tail set from storage ca:ram stack[-1].uuid
+
 
 execute summon interaction if function ca:dvg_abl/instance/constructor/interaction run function ca:gnr/get_uuid
-data modify storage ca:ram stack[-1].reference_list.interaction set from storage ca:ram stack[-1].uuid
+    data modify storage ca:ram stack[-1].reference_list.interaction set from storage ca:ram stack[-1].uuid
 
 # =========================================================================================================================
 

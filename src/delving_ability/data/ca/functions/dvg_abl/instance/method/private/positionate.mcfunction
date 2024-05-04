@@ -1,10 +1,8 @@
 
 # =========================================================================================================================
 
-tag @s add tmp
-    execute summon block_display run function ca:dvg_abl/instance/constructor/tail_member_stack
-tag @s remove tmp
+execute unless entity @e[type=item_display,tag=dvg_abl.vehicle,distance=..32,limit=1] run return run tp @s ~ ~ ~
 
-return 1
+execute positioned ~ ~32 ~ run function ca:dvg_abl/instance/method/private/positionate
 
 # =========================================================================================================================

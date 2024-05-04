@@ -8,10 +8,10 @@ function ca:gnr_lay/new/ext
 gamemode spectator @s
 
 data modify storage ca:ram stack[-1] merge value {log_entry:{function:"ca:dvg_abl/new/instance",type:"ERROR",msg:"The targeted entity is not a player!"}}
-execute if entity @s[type=!minecraft:player] if function ca:ml/core/log/generate_entry run return run function ca:gnr_lay/delete/ext
+    execute if entity @s[type=!minecraft:player] if function ca:ml/core/log/generate_entry run return run function ca:gnr_lay/delete/ext
 
 data modify storage ca:ram stack[-1] merge value {log_entry:{function:"ca:dvg_abl/new/instance",type:"ERROR",msg:"The player doesn't met the conditions to start an instance of Delving Ability!"}}
-execute unless function ca:dvg_abl/check if function ca:ml/core/log/generate_entry run return run function ca:gnr_lay/delete/ext
+    execute unless function ca:dvg_abl/check if function ca:ml/core/log/generate_entry run return run function ca:gnr_lay/delete/ext
 
 # =========================================================================================================================
 
@@ -30,16 +30,13 @@ function ca:dvg_abl/new/instance/store_list with storage ca:ram stack[-1].storag
 
 function ca:gnr_lay/new/int
 
-function ca:dvg_abl/new/instance/allocate_fast_reference
+    function ca:dvg_abl/new/instance/allocate_fast_reference
 
 function ca:gnr_lay/delete/int
 
-# =========================================================================================================================
 
 tag @s add tmp
-
-execute at @s positioned ~ ~-0.0001 ~ align xyz summon marker if function ca:dvg_abl/new/instance/get_pos run kill @s
-
+    execute at @s positioned ~ ~-0.0001 ~ align xyz summon marker if function ca:dvg_abl/new/instance/get_pos run kill @s
 tag @s remove tmp
 
 # =========================================================================================================================
@@ -53,8 +50,11 @@ tag @s remove dvg_abl.facing.east
 tag @s remove dvg_abl.facing.down
 tag @s remove dvg_abl.facing.up
 
+effect give @s minecraft:blindness infinite 0 true
+effect give @s minecraft:invisibility infinite 0 true
+
 function ca:dvg_abl/get/reference_list
-function ca:dvg_abl/new/instance/extra_tasks with storage ca:ram stack[-1].reference_list
+    function ca:dvg_abl/new/instance/extra_tasks with storage ca:ram stack[-1].reference_list
 
 gamemode adventure @s
 
@@ -62,7 +62,10 @@ function ca:dvg_abl/method/pivot/resonance
 
 # =========================================================================================================================
 
-execute on vehicle positioned ~ ~512 ~ run function ca:dvg_abl/instance/method/private/posiionate
+execute on vehicle positioned ~ ~512 ~ run function ca:dvg_abl/instance/method/private/positionate
+
+scoreboard players set @s ca.dvg_abl.cooldown 12
+schedule function ca:dvg_abl/main 1t replace
 
 function ca:gnr_lay/delete/ext
 

@@ -9,7 +9,7 @@ execute store result storage ca:ram stack[-1].pivot_pos.x int 1 run scoreboard p
 execute store result storage ca:ram stack[-1].pivot_pos.y int 1 run scoreboard players get @s ca.dvg_abl.tail.rdc.y
 execute store result storage ca:ram stack[-1].pivot_pos.z int 1 run scoreboard players get @s ca.dvg_abl.tail.rdc.z
 
-function ca:dvg_abl/method/pivot/resonance/at_pivot with storage ca:ram stack[-1].pivot_pos 
+    function ca:dvg_abl/method/pivot/resonance/at_pivot with storage ca:ram stack[-1].pivot_pos 
 
 # =========================================================================================================================
 
@@ -23,8 +23,8 @@ execute store result score @s ca.dvg_abl.resonance.up run data get storage ca:ra
 # =========================================================================================================================
 
 function ca:dvg_abl/get/reference_list
-function ca:dvg_abl/method/cage/update_all_faces with storage ca:ram stack[-1].reference_list
-function ca:dvg_abl/method/cage/update_selected_face with storage ca:ram stack[-1].reference_list
+    function ca:dvg_abl/method/cage/update_all_faces with storage ca:ram stack[-1].reference_list
+    function ca:dvg_abl/method/cage/update_selected_face with storage ca:ram stack[-1].reference_list
 
 # =========================================================================================================================
 
