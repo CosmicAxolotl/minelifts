@@ -1,0 +1,151 @@
+{
+	"criteria": {
+		"forward": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"input": {
+									"forward": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"backward": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"input": {
+									"backward": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+        "right": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"input": {
+									"right": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"left": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"input": {
+									"left": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+        "jump": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"input": {
+									"jump": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"crouch": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"input": {
+									"sneak": true
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+        "sprint": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type_specific": {
+								"type": "minecraft:player",
+								"input": {
+									"sprint": true
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+    },
+    "requirements": [
+        [
+            "forward",
+            "backward",
+            "right",
+            "left",
+            "sprint",
+            "crouch",
+			"jump"
+        ]
+    ],
+    "rewards": {
+        "function": "ca:gnr/inputs"
+    }
+}
