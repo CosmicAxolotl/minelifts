@@ -21,7 +21,7 @@
 		"minecraft:redstone_torch",
 		"minecraft:soul_torch",
 		"#minecraft:flowers",
-		"#minecraft:tall_flowers",
+		"#minecraft:enchantment_power_transmitter",
 		"#minecraft:air"
 	]
 }
