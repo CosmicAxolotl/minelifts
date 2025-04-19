@@ -1,0 +1,7 @@
+{
+    "values":[
+        "#ca:load/gnr/get_uuid",
+        "ca:dvg_abl/load"
+    ],
+    "replace": false
+}

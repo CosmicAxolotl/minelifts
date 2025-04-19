@@ -11,18 +11,21 @@ function ca:gnr_lay/new/int
 
 # =========================================================================================================================
 
-scoreboard players set #$move.x ca.dvg_abl.fun 0
-scoreboard players set #$move.y ca.dvg_abl.fun 0
-scoreboard players set #$move.z ca.dvg_abl.fun 0
+execute store \
+    result score #$steps ca.dvg_abl.fun run \
+        data get storage ca:ram stack[-1].move.steps
 
-    execute if data storage ca:ram protected_stack[-1][-1].move{direction:"south"} run scoreboard players set #$move.z ca.dvg_abl.fun 1
-    execute if data storage ca:ram protected_stack[-1][-1].move{direction:"north"} run scoreboard players set #$move.z ca.dvg_abl.fun -1
-    execute if data storage ca:ram protected_stack[-1][-1].move{direction:"east"} run scoreboard players set #$move.x ca.dvg_abl.fun 1
-    execute if data storage ca:ram protected_stack[-1][-1].move{direction:"west"} run scoreboard players set #$move.x ca.dvg_abl.fun -1
-    execute if data storage ca:ram protected_stack[-1][-1].move{direction:"down"} run scoreboard players set #$move.y ca.dvg_abl.fun -1
-    execute if data storage ca:ram protected_stack[-1][-1].move{direction:"up"} run scoreboard players set #$move.y ca.dvg_abl.fun 1
 
-execute store result score #$move.steps ca.dvg_abl.fun run data get storage ca:ram protected_stack[-1][-1].move.steps
+execute store result score #$move.x ca.dvg_abl.fun run \
+    data get storage ca:ram protected_stack[-1][-2].step_vector[0]
+execute store result score #$move.y ca.dvg_abl.fun run \
+    data get storage ca:ram protected_stack[-1][-2].step_vector[1]
+execute store result score #$move.z ca.dvg_abl.fun run \
+    data get storage ca:ram protected_stack[-1][-2].step_vector[2]
+
+execute store result score #$move.steps ca.dvg_abl.fun run \
+    data get storage ca:ram protected_stack[-1][-1].move.steps
+
 
 # =========================================================================================================================
 

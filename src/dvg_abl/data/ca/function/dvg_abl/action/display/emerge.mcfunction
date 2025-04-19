@@ -5,7 +5,7 @@ function ca:gnr_lay/new/int
 
 # =========================================================================================================================
 
-scoreboard players set @s ca.dvg_abl.cooldown 12
+scoreboard players set @s ca.dvg_abl.cooldown 18
 function ca:dvg_abl/get/reference_list
     function ca:dvg_abl/instance/method/peek with storage ca:ram stack[-1].reference_list
 

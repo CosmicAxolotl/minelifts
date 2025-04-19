@@ -4,9 +4,10 @@
 title @s times 2 6 4
 title @s subtitle {"text":"Canceled.","color":"red"}
 title @s title ""
+title @s actionbar [{"text":"On cooldown...","color":"white"}]
 
 
-scoreboard players set @s ca.dvg_abl.cooldown 3
+scoreboard players set @s ca.dvg_abl.cooldown 12
 
 playsound minecraft:block.dripstone_block.fall player @s ~ ~ ~ 99999999 0.57 1
 playsound minecraft:entity.silverfish.ambient player @s ~ ~ ~ 99999999 0.66 1

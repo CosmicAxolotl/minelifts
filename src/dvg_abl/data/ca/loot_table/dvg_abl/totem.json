@@ -1,0 +1,37 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name": {
+								"text": "Lepis Animus",
+								"color": "gold",
+								"bold": true
+							}
+						},
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:consumable": {
+									"consume_seconds": 999999999999999999999999999999,
+									"animation": "none",
+									"sound": "minecraft:block.beacon.power_select",
+									"has_consume_particles": false
+								},
+								"minecraft:custom_data": "{animus:\"lepis\"}",
+                                "minecraft:item_model":"minecraft:totem_of_undying"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

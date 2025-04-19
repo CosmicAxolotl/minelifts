@@ -25,6 +25,7 @@ tag @s remove dvg_abl.facing.up
 
 tag @s remove dvg_abl
 tag @s remove dvg_abl.peeking
+tag @s remove dvg_abl.quick_jump_boost
 
 scoreboard players reset @s ca.dvg_abl.fun
 

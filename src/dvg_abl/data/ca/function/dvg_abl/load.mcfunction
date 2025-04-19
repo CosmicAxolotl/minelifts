@@ -13,6 +13,7 @@ scoreboard objectives add ca.dvg_abl.resonance.east trigger
 scoreboard objectives add ca.dvg_abl.resonance.down trigger
 scoreboard objectives add ca.dvg_abl.resonance.up trigger
 
+scoreboard objectives add ca.dvg_abl.map_hold trigger
 scoreboard objectives add ca.dvg_abl.cooldown trigger
 scoreboard objectives add ca.dvg_abl.fun trigger
 
