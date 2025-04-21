@@ -11,6 +11,7 @@ scoreboard objectives add ca.ml.arc_glm.random_rot.x trigger
 scoreboard objectives add ca.ml.arc_glm.random_rot.y trigger
 scoreboard objectives add ca.ml.arc_glm.random_rot.z trigger
 
+scoreboard objectives add ca.ml.arc_glm.disturbance trigger
 
 
 scoreboard objectives add ca.ml.arc_glm.count.block trigger

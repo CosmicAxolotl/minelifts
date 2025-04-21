@@ -2,6 +2,7 @@
 
 function ca:gnr_lay/new/int
 
+function ca:ml/arc_glm/tasks/annoyance
 
 scoreboard players add @s ca.ml.arc_glm.time_existing 1
 

@@ -41,6 +41,7 @@ execute positioned 0 0 0 summon marker at @s run \
 data remove storage ca:ram stack[-1].platform.arrangement[{type:"AIR"}]
 
 $data modify storage ca:ram stack[-1].platform.pallete set value $(pallete)
+$data modify storage ca:ram stack[-1].platform.id set value "$(id)"
 
 $data modify storage ca:ml/arc_glm/platforms $(id) set from storage ca:ram stack[-1].platform
 

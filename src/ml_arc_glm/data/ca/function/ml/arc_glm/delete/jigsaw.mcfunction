@@ -2,6 +2,14 @@
 
 function ca:gnr_lay/new/ext
 
+gamerule doTileDrops false
+execute \
+    if entity @s[tag=platform] \
+    on passengers if entity @s[tag=block_mount] \
+    on passengers run \
+        function ca:ml/arc_glm/delete/platform_animation
+gamerule doTileDrops true
+
 execute on passengers run kill @s[tag=jigsaw_information]
 execute on passengers run tag @s remove clockwise
 execute on passengers if predicate {condition:"random_chance",chance:0.5} run tag @s add clockwise

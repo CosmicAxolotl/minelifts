@@ -48,15 +48,14 @@ execute positioned ~-0.5 ~-0.5 ~-0.5 as @a[dx=0,gamemode=!creative,gamemode=!spe
 execute if score #$.success_attack ca.ml.arc_glm.fun matches 0 at @s run tp @s ~ ~ ~ facing ^ ^ ^-1
 execute if score #$.success_attack ca.ml.arc_glm.fun matches 0 at @s run tp @s ^ ^ ^1.5 ~ ~
 
+
+scoreboard players set #4 ca.ml.arc_glm.fun 4
+scoreboard players operation #$.time_existing ca.ml.arc_glm.fun = @s ca.ml.arc_glm.time_existing
+scoreboard players operation #$.time_existing ca.ml.arc_glm.fun %= #4 ca.ml.arc_glm.fun
+
 scoreboard players add @s ca.ml.arc_glm.time_existing 1
 
-execute unless predicate {                                  \
-        "condition": "minecraft:entity_properties",     \
-        "entity": "this",                               \
-        "predicate": {                                  \
-            "periodic_tick": 4                          \
-        }                                               \
-    } run return run \
+execute unless score #$.time_existing ca.ml.arc_glm.fun matches 0 run return run \
         tag @e remove tmp
 
 execute \
