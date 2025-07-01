@@ -1,0 +1,9 @@
+{
+    "values": [
+        "ca:gnr/load/get_uuid",
+        "ca:gnr/load/trig",
+        "ca:ml/core/load",
+        "#ca:load"
+    ],
+    "replace": false
+}
