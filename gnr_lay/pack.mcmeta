@@ -1,0 +1,10 @@
+{
+    "pack":{
+        "pack_format":48,
+        "description":[
+            {"text":"","color":"dark_gray"},            "\n",
+            "Generic function layering library.",       "\n",
+            "Made by CosmicAxolotl (2024)"
+        ]
+    }
+}
