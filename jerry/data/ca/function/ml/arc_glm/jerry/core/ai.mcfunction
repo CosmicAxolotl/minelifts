@@ -17,6 +17,19 @@ execute at @s \
     if function ca:ml/arc_glm/jerry/is_player_staring run \
         scoreboard players add #$.tmp ca.ml.arc_glm.fun 200
 
+function ca:gnr_lay/new/int
+
+
+# move disjointed blocks around the core
+
+execute at @s \
+    as @e[tag=idle,tag=!snapped,tag=ca.ml.arc_glm.djt_blk.snapper,distance=4..,limit=12,sort=random] run \
+        function ca:ml/arc_glm/jerry/core/tp_snapper
+
+function ca:gnr_lay/delete/int
+
+
+
 scoreboard players operation @s ca.ml.arc_glm.jerry.flee_desire -= #$.tmp ca.ml.arc_glm.fun
 
 execute if score @s ca.ml.arc_glm.jerry.flee_desire matches ..0 run \
