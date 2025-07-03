@@ -63,6 +63,10 @@ execute \
             function ca:ml/arc_glm/delete/jigsaw
 
 execute if score @s ca.ml.arc_glm.health matches ..350 at @s positioned ~ ~0.5 ~ \
+    if entity @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover,predicate=ca:ml/arc_glm/jerry/periodic] on passengers run \
+        effect give @s[tag=hitbox] minecraft:regeneration 1 4 false
+
+execute if score @s ca.ml.arc_glm.health matches ..350 at @s positioned ~ ~0.5 ~ \
     as @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover] run \
         return run function ca:ml/arc_glm/jerry/core/low_health_cover/rotate
 
