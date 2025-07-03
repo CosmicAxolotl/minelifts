@@ -56,6 +56,11 @@ execute \
     if score #$.check ca.ml.arc_glm.fun matches 1 at @s run \
         function ca:ml/arc_glm/jerry/core/low_health_cover/summon
 
+execute at @s positioned ~ ~0.5 ~ \
+    if entity @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover,tag=complete] \
+    positioned ~ ~7.5 ~ run \
+        function ca:ml/arc_glm/jerry/core/ai/attack
+
 # destroy low_health_cover if it has more than half max health
 execute \
     if score @s ca.ml.arc_glm.health matches 351.. \
@@ -73,6 +78,7 @@ execute if score @s ca.ml.arc_glm.health matches ..350 at @s positioned ~ ~0.5 ~
 
 
 
+execute at @s positioned ~ ~0.5 ~ run function ca:ml/arc_glm/jerry/core/ai/attack
 
 
 execute store result score #$.tmp ca.ml.arc_glm.fun run random value 0..360000
