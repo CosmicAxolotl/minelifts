@@ -3,6 +3,8 @@
 scoreboard objectives add ca.ml.arc_glm.fun trigger
 
 
+scoreboard objectives add ca.ml.arc_glm.count trigger
+
 
 scoreboard objectives add ca.ml.arc_glm.id trigger
 
