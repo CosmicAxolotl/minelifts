@@ -1,19 +1,19 @@
 
 scoreboard players remove @s ca.ml.arc_glm.jerry.flee_desire 1
 
-execute at @s if entity @a[gamemode=!spectator,distance=..4] run \
+execute at @s if entity @a[gamemode=!spectator,tag=!ignore,distance=..4] run \
     scoreboard players remove @s ca.ml.arc_glm.jerry.flee_desire 24000
 
-execute at @s if entity @a[gamemode=!spectator,distance=..8] run \
+execute at @s if entity @a[gamemode=!spectator,tag=!ignore,distance=..8] run \
     scoreboard players remove @s ca.ml.arc_glm.jerry.flee_desire 2400
 
-execute at @s if entity @a[gamemode=!spectator,distance=..16] run \
+execute at @s if entity @a[gamemode=!spectator,tag=!ignore,distance=..16] run \
     scoreboard players remove @s ca.ml.arc_glm.jerry.flee_desire 100
 
 scoreboard players set #$.tmp ca.ml.arc_glm.fun 0
 
 execute at @s \
-    positioned ~ ~0.5 ~ as @a[gamemode=!spectator] \
+    positioned ~ ~0.5 ~ as @a[gamemode=!spectator,tag=!ignore] \
     if function ca:ml/arc_glm/jerry/is_player_staring run \
         scoreboard players add #$.tmp ca.ml.arc_glm.fun 200
 
@@ -38,7 +38,6 @@ execute if score @s ca.ml.arc_glm.health matches 100.. run \
 execute if score @s ca.ml.arc_glm.health matches ..100 \
     at @s as @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover] run \
     scoreboard players set #$.check ca.ml.arc_glm.fun 0
-
 
 execute \
     if score #$.check ca.ml.arc_glm.fun matches 1 at @s run \
