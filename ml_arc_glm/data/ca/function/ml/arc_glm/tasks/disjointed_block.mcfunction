@@ -1,7 +1,6 @@
 
 # ===============================================================================================================================
 
-particle dust{color:[ 0.00784313725, 0.9294117647, 0.22352941176], scale:4} ~ ~0.5 ~ 0.6 0.6 0.6 0 1 force @a[gamemode=spectator]
 
 scoreboard players reset #$.success_attack ca.ml.arc_glm.fun
 execute positioned ~-0.5 ~ ~-0.5 as @a[dx=0,gamemode=!creative,gamemode=!spectator] positioned ~0.5 ~0.5 ~0.5 run \
