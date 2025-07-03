@@ -83,5 +83,4 @@ execute \
 
 
 tp @s ~ ~ ~ 0 0
-particle dust{color:[ 0.00784313725, 0.9294117647, 0.22352941176], scale:4} ~ ~0.5 ~ 0.5 0.5 0.5 0 1 normal @a[gamemode=spectator]
 

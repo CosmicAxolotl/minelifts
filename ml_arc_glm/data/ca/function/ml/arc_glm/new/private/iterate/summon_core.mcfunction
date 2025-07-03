@@ -61,7 +61,7 @@ $execute \
                         },                                              \
                         {                                               \
                             duration: -1, show_icon: false,             \
-                            amplifier: 2b,                              \
+                            amplifier: 0b,                              \
                             id: "minecraft:regeneration",               \
                             show_particles: false                       \
                         },                                              \

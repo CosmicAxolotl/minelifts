@@ -187,5 +187,4 @@ execute \
         return run function ca:ml/arc_glm/tasks/private/vectors/0_0_-1 with storage ca:ram stack[-1].compound_vector.0_0_-1
 
 tp @s ~ ~ ~ 0 0
-particle dust{color:[ 0.00784313725, 0.9294117647, 0.22352941176], scale:4} ~ ~0.5 ~ 0.5 0.5 0.5 0 4 force @a[gamemode=spectator]
  

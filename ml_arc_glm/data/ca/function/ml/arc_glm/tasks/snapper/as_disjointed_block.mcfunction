@@ -1,8 +1,8 @@
 
-execute positioned as @s[distance=..32] run \
+execute positioned as @s[distance=..64] run \
     function ca:ml/arc_glm/tasks/disjointed_block/facing
 
-execute positioned as @s[distance=32..] run \
+execute positioned as @s[distance=64..] run \
     tp @s ^ ^0.3 ^2 ~4 ~
 
 execute \

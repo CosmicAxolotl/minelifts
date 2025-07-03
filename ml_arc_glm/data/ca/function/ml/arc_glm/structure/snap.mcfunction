@@ -82,6 +82,7 @@ execute if data storage ca:ram stack[-1].test{block_type:"wall"} run \
 
 function ca:ml/arc_glm/structure/private/finish_snap
 
+execute on vehicle run scoreboard players add @s ca.ml.arc_glm.count 1
 
 
 execute on vehicle on passengers run \
