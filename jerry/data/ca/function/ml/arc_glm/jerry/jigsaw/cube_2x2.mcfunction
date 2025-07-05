@@ -20,11 +20,25 @@ execute \
 tag @a remove tmp
 execute on passengers on origin at @s positioned ~-0.5 ~ ~-0.5 run tag @a[dx=0,gamemode=!spectator,tag=!ignore] add tmp
 
-execute if score @s ca.ml.arc_glm.count matches ..20 at @s as @a[tag=tmp] run damage @s 2.25 minecraft:mob_projectile at ^ ^ ^-1
-execute if score @s ca.ml.arc_glm.count matches ..30 at @s as @a[tag=tmp] run damage @s 4.5 minecraft:mob_projectile at ^ ^ ^-1
-execute if score @s ca.ml.arc_glm.count matches ..40 at @s as @a[tag=tmp] run damage @s 9 minecraft:mob_projectile at ^ ^ ^-1
-execute if score @s ca.ml.arc_glm.count matches ..50 at @s as @a[tag=tmp] run damage @s 12 minecraft:mob_projectile at ^ ^ ^-1
-execute if score @s ca.ml.arc_glm.count matches ..56 at @s as @a[tag=tmp] run damage @s 15 minecraft:mob_projectile at ^ ^ ^-1
+
+execute if score @s ca.ml.arc_glm.count matches ..20 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 2 minecraft:mob_projectile at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.count matches ..30 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 4 minecraft:mob_projectile at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.count matches ..40 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 8 minecraft:mob_projectile at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.count matches ..50 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 10 minecraft:mob_projectile at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.count matches ..56 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 14 minecraft:mob_projectile at ^ ^ ^-1
+
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 40.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 1 minecraft:sonic_boom at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 120.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 2 minecraft:sonic_boom at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 240.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 4 minecraft:sonic_boom at ^ ^ ^-1
+
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run function ca:ml/arc_glm/jerry/block_shield
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. run effect give @a[tag=tmp] minecraft:blindness 1 0 true
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. run effect give @a[tag=tmp] minecraft:slowness 1 3 true
+
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 400.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 8 minecraft:sonic_boom at ^ ^ ^-1
+
+
+
 
 execute store success score #$.tmp ca.ml.arc_glm.fun if entity @a[tag=tmp,limit=1]
 tag @a remove tmp
@@ -49,7 +63,8 @@ execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. \
     positioned ^ ^ ^2 facing entity @s feet positioned as @s facing ^ ^ ^-1 run \
         function ca:ml/arc_glm/jerry/jigsaw/move
 
-particle dust{color:[ 0.98039215686, 0.69019607843, 0.06666666666], scale:4} ^ ^ ^-0.2 0.5 0.5 0.5 0 5 force @a
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches ..240 run particle dust{color:[ 0.98039215686, 0.69019607843, 0.06666666666], scale:2} ^ ^ ^-0.2 0.5 0.5 0.5 0 5 normal @a
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. run particle dust{color:[ 0.98039215686, 0.26777, 0.03], scale:2} ^ ^ ^-0.2 0.5 0.5 0.5 0 10 normal @a
 
 execute if score #$.tmp ca.ml.arc_glm.fun matches 1 run return run function ca:ml/arc_glm/delete/jigsaw
 
