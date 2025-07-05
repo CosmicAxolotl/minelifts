@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "shot_arrow": {
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "direct_entity": {
+                            "type": "#minecraft:arrows"
+                        },
+                        "tags": [
+                            {
+                                "expected": true,
+                                "id": "minecraft:is_projectile"
+                            }
+                        ]
+                    }
+                },
+                "entity": {
+                    "type": "minecraft:ghast",
+                    "vehicle": {
+                        "nbt": "{Tags:[\"ca.ml.arc_glm.core\",\"awaken\"]}"
+                    }
+                }
+            },
+            "trigger": "minecraft:player_hurt_entity"
+        }
+    },
+    "requirements": [
+        [ "shot_arrow" ]
+    ],
+    "rewards": {
+        "function": "ca:ml/arc_glm/player/pling"
+    },
+    "sends_telemetry_event": false
+}

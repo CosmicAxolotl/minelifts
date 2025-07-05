@@ -46,7 +46,7 @@ ride @e[type=block_display,distance=..4,tag=tmp,tag=ca.ml.arc_glm.djt_blk,tag=!i
 playsound minecraft:entity.blaze.hurt hostile @a ~ ~ ~ 1.5 1.4
 particle flash ~ ~ ~ 0 0 0 0.5 0 force @a
 particle minecraft:crit ~ ~ ~ 0.4 0.4 0.4 0.5 20 force @a
-particle dust{color:[ 0.00784313725, 0.9294117647, 0.22352941176], scale:3} ~ ~ ~ 0.7 0.7 0.7 1 40 force @a
+particle dust{color:[ 0.98039215686, 0.69019607843, 0.06666666666], scale:2.5} ~ ~ ~ 0.7 0.7 0.7 1 40 force @a
 
 execute on vehicle run tag @s add update
 

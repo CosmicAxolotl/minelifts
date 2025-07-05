@@ -15,8 +15,8 @@ data modify storage ca:ram stack[-1].jigsaw set from storage ca:ram stack[-1].pl
 
 $data modify storage ca:ram stack[-1].jigsaw.bossbar_id set value "$(bossbar_id)"
 
-scoreboard players set #700 ca.ml.arc_glm.fun 700
-scoreboard players operation #$.elements ca.ml.arc_glm.fun *= #700 ca.ml.arc_glm.fun
+scoreboard players set #600 ca.ml.arc_glm.fun 600
+scoreboard players operation #$.elements ca.ml.arc_glm.fun *= #600 ca.ml.arc_glm.fun
 
 $execute store result bossbar $(bossbar_id) max run \
     scoreboard players get #$.elements ca.ml.arc_glm.fun

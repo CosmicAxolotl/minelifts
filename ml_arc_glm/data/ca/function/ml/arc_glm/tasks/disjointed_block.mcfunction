@@ -39,14 +39,14 @@ scoreboard players operation @s ca.ml.arc_glm.random_rot.z += #$.random_torque c
 
 execute \
     if data storage ca:ram stack[-1].test{idle:true} positioned ~ ~0.5 ~ run \
-        particle dust{color:[ 0.00784313725, 0.9294117647, 0.22352941176], scale:3} ^ ^ ^-0.5 0.1 0.1 0.1 0 3 force @a
+        particle dust{color:[ 0.00784313725, 0.9294117647, 0.22352941176], scale:2} ^ ^ ^-0.5 0.1 0.1 0.1 0 3 normal @a
 
 execute \
     if data storage ca:ram stack[-1].test{idle:false} positioned ~ ~0.5 ~ run \
         playsound entity.guardian.ambient hostile @a ~ ~ ~ 0.5 2
 execute \
     if data storage ca:ram stack[-1].test{idle:false} run \
-        particle dust{color:[ 0.98039215686, 0.69019607843, 0.06666666666], scale:3} ^ ^ ^-0.2 0.1 0.1 0.1 0 2 force @a
+        particle dust{color:[ 0.98039215686, 0.69019607843, 0.06666666666], scale:2} ^ ^ ^-0.2 0.1 0.1 0.1 0 2 normal @a
 
 
 data modify storage ca:ram stack[-1].gimbal set value [ 0.0f , 0.0f , 0.0f ]

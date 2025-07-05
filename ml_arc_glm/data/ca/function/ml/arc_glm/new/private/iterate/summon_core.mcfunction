@@ -74,10 +74,10 @@ $execute \
                     ],                                                  \
                     PersistenceRequired: true,                          \
                     Silent: true,                                       \
-                    Health: 700.0f,                                     \
+                    Health: 600.0f,                                     \
                     NoAI: true,                                         \
                     attributes: [                                       \
-                        { id: "minecraft:max_health", base: 700.0d },   \
+                        { id: "minecraft:max_health", base: 600.0d },   \
                         { id: "minecraft:scale",      base: 0.25d },    \
                     ],                                                  \
                     Team: "no_collisions",                              \
