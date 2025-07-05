@@ -1,7 +1,7 @@
 
 execute on passengers \
     if entity @s[tag=ca.ml.arc_glm.djt_blk.snapper,tag=snapped] on origin \
-    at @s positioned ~-0.5 ~ ~-0.5 as @a[dx=0] run damage @s 4 minecraft:mob_projectile at ~0.5 ~0.5 ~0.5
+    at @s positioned ~-0.5 ~ ~-0.5 as @a[dx=0] run damage @s 2 minecraft:sonic_boom at ~0.5 ~0.5 ~0.5
 
 scoreboard players set #2 ca.ml.arc_glm.fun 2
 
