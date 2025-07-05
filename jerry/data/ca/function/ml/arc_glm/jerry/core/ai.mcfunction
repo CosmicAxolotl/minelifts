@@ -44,41 +44,47 @@ execute unless score @s ca.ml.arc_glm.jerry.flee_desire matches ..360000 run \
 scoreboard players set #$.check ca.ml.arc_glm.fun 1
 
 # if its health is not low enough
-execute if score @s ca.ml.arc_glm.health matches 100.. run \
+execute if score @s ca.ml.arc_glm.health matches 151.. run \
     scoreboard players set #$.check ca.ml.arc_glm.fun 0
 
 # if it already has a low_health_cover
-execute if score @s ca.ml.arc_glm.health matches ..100 \
-    at @s as @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover] run \
+execute if score @s ca.ml.arc_glm.health matches ..150 \
+    at @s if entity @e[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover,limit=1] run \
     scoreboard players set #$.check ca.ml.arc_glm.fun 0
 
 execute \
-    if score #$.check ca.ml.arc_glm.fun matches 1 at @s run \
+    if score #$.check ca.ml.arc_glm.fun matches 1 at @s positioned ~ ~4 ~ run \
         function ca:ml/arc_glm/jerry/core/low_health_cover/summon
 
-execute at @s positioned ~ ~0.5 ~ \
+execute at @s \
     if entity @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover,tag=complete] \
     positioned ~ ~7.5 ~ run \
         function ca:ml/arc_glm/jerry/core/ai/attack
 
 # destroy low_health_cover if it has more than half max health
 execute \
-    if score @s ca.ml.arc_glm.health matches 351.. \
+    if score @s ca.ml.arc_glm.health matches 401.. \
     at @s as @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover] run \
             function ca:ml/arc_glm/delete/jigsaw
 
-execute if score @s ca.ml.arc_glm.health matches ..350 at @s positioned ~ ~0.5 ~ \
+execute if score @s ca.ml.arc_glm.health matches ..400 at @s positioned ~ ~0.5 ~ \
     if entity @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover,predicate=ca:ml/arc_glm/jerry/periodic] on passengers run \
         effect give @s[tag=hitbox] minecraft:regeneration 1 4 false
+execute if score @s ca.ml.arc_glm.health matches ..400 at @s positioned ~ ~0.5 ~ \
+    if entity @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover,predicate=ca:ml/arc_glm/jerry/periodic] run \
+        playsound minecraft:block.trial_spawner.ominous_activate hostile @a ~ ~ ~ 5 2 0.75
+execute if score @s ca.ml.arc_glm.health matches ..400 at @s positioned ~ ~0.5 ~ \
+    if entity @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover,predicate=ca:ml/arc_glm/jerry/periodic] run \
+        particle minecraft:poof ~ ~ ~ 0.2 0.2 0.2 0.6 50 normal @a
 
-execute if score @s ca.ml.arc_glm.health matches ..350 at @s positioned ~ ~0.5 ~ \
+execute if score @s ca.ml.arc_glm.health matches ..400 at @s positioned ~ ~0.5 ~ \
     as @n[type=block_display,distance=..1,tag=jigsaw,tag=low_health_cover] run \
         return run function ca:ml/arc_glm/jerry/core/low_health_cover/rotate
 
 
 
 
-execute at @s positioned ~ ~0.5 ~ run function ca:ml/arc_glm/jerry/core/ai/attack
+execute at @s positioned ~ ~7.5 ~ run function ca:ml/arc_glm/jerry/core/ai/attack
 
 
 execute store result score #$.tmp ca.ml.arc_glm.fun run random value 0..360000
