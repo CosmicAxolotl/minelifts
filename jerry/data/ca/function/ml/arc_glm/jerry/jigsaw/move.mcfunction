@@ -30,10 +30,11 @@ execute if score @s ca.ml.arc_glm.jerry.lifetime matches 281.. \
 
 execute unless predicate {                          \
         condition: "minecraft:random_chance",       \
-        chance: 0.25                                \
+        chance: 0.1                                \
     } run return 1
 
-
-playsound minecraft:entity.warden.nearby_closest hostile @a ~ ~ ~ 2 0.7
+playsound minecraft:entity.warden.nearby_closest hostile @a ~ ~ ~ 2 2
+playsound minecraft:entity.warden.nearby_closer hostile @a ~ ~ ~ 3 1
+playsound minecraft:entity.warden.nearby_close hostile @a ~ ~ ~ 4 0.5
 
 
