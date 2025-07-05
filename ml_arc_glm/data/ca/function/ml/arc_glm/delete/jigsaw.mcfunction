@@ -19,13 +19,20 @@ execute on passengers \
 
 execute on passengers run kill @s[tag=block_mount]
 
+execute if score @s ca.ml.arc_glm.count matches 61.. run \
+    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 0.7 0.8
+execute if score @s ca.ml.arc_glm.count matches 20..60 run \
+    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 0.3 0.8
+execute if score @s ca.ml.arc_glm.count matches 10.. run \
+    playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 2.5 0.8
+execute if score @s ca.ml.arc_glm.count matches 2.. run \
+    playsound minecraft:block.stone.break hostile @a ~ ~ ~ 2.5 0.8
+
+
+execute if score @s ca.ml.arc_glm.count.block matches 2.. run \
+    particle minecraft:cloud ~ ~ ~ 1 1 1 0.1 150 force
+
 kill @s
-
-playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 2.5 0.8
-playsound minecraft:block.stone.break hostile @a ~ ~ ~ 2.5 0.8
-playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 2.5 0.8
-
-particle minecraft:cloud ~ ~ ~ 1 1 1 0.1 150 force
 
 function ca:gnr_lay/delete/ext
 
