@@ -18,7 +18,7 @@ execute if score #$.time_existing ca.ml.arc_glm.fun matches 0 \
     if data storage ca:ram stack[-1].test{idle:true} run \
         playsound entity.guardian.ambient hostile @a ~ ~ ~ 0.1 1
 
-scoreboard players set #4 ca.ml.arc_glm.fun 8
+scoreboard players set #4 ca.ml.arc_glm.fun 16
 scoreboard players operation #$.time_existing ca.ml.arc_glm.fun = @s ca.ml.arc_glm.time_existing
 scoreboard players operation #$.time_existing ca.ml.arc_glm.fun %= #4 ca.ml.arc_glm.fun
 
@@ -27,13 +27,13 @@ scoreboard players add @s ca.ml.arc_glm.time_existing 1
 
 execute unless score #$.time_existing ca.ml.arc_glm.fun matches 0 run return 1
 
-execute store result score #$.random_torque ca.ml.arc_glm.fun run random value -12000..12000
+execute store result score #$.random_torque ca.ml.arc_glm.fun run random value -34000..34000
 scoreboard players operation @s ca.ml.arc_glm.random_rot.x += #$.random_torque ca.ml.arc_glm.fun
 
-execute store result score #$.random_torque ca.ml.arc_glm.fun run random value -12000..12000
+execute store result score #$.random_torque ca.ml.arc_glm.fun run random value -34000..34000
 scoreboard players operation @s ca.ml.arc_glm.random_rot.y += #$.random_torque ca.ml.arc_glm.fun
 
-execute store result score #$.random_torque ca.ml.arc_glm.fun run random value -23000..23000
+execute store result score #$.random_torque ca.ml.arc_glm.fun run random value -56000..56000
 scoreboard players operation @s ca.ml.arc_glm.random_rot.z += #$.random_torque ca.ml.arc_glm.fun
 
 
