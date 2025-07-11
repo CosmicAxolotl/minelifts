@@ -21,7 +21,7 @@ tag @a remove tmp
 execute on passengers on origin at @s positioned ~-0.5 ~ ~-0.5 run tag @a[dx=0,gamemode=!spectator,tag=!ignore] add tmp
 
 
-execute if score @s ca.ml.arc_glm.count matches ..20 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 2 minecraft:mob_projectile at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.count matches ..20 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 1 minecraft:mob_projectile at ^ ^ ^-1
 execute if score @s ca.ml.arc_glm.count matches ..30 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 4 minecraft:mob_projectile at ^ ^ ^-1
 execute if score @s ca.ml.arc_glm.count matches ..40 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 8 minecraft:mob_projectile at ^ ^ ^-1
 execute if score @s ca.ml.arc_glm.count matches ..50 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 10 minecraft:mob_projectile at ^ ^ ^-1
@@ -29,7 +29,7 @@ execute if score @s ca.ml.arc_glm.count matches ..56 at @s positioned ^ ^ ^-1 as
 
 execute if score @s ca.ml.arc_glm.jerry.lifetime matches 40.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 1 minecraft:sonic_boom at ^ ^ ^-1
 execute if score @s ca.ml.arc_glm.jerry.lifetime matches 120.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 2 minecraft:sonic_boom at ^ ^ ^-1
-execute if score @s ca.ml.arc_glm.jerry.lifetime matches 240.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 4 minecraft:sonic_boom at ^ ^ ^-1
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 240.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 5 minecraft:sonic_boom at ^ ^ ^-1
 
 execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. at @s positioned ^ ^ ^-1 as @a[tag=tmp] run function ca:ml/arc_glm/jerry/block_shield
 execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. run effect give @a[tag=tmp] minecraft:blindness 1 0 true
