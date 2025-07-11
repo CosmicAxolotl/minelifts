@@ -27,11 +27,11 @@ tag @s[tag=!snapped] remove already_checked
 execute if entity @s[tag=snapped] run \
     return run function ca:gnr_lay/delete/int
 
-tag @s add tmp
 
-execute store success storage ca:ram stack[-1].test.idle byte 1 if entity @s[tag=idle,x=0]
+execute store success storage ca:ram stack[-1].test.idle byte 1 if entity @s[tag=idle]
 execute store success storage ca:ram stack[-1].test.clockwise byte 1 if entity @s[tag=clockwise]
 
+tag @s add tmp
 
 execute at @s \
     on origin on vehicle \

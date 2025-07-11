@@ -71,7 +71,7 @@ data modify storage ca:ram stack[-1].entity set value {     \
         right_rotation:[0f, 0f, 0f, 1f],                    \
         translation: [0.0f, 0.0f, 0.0f]                     \
     },                                                      \
-    interpolation_duration: 1,                              \
+    interpolation_duration: 2,                              \
     Rotation: [0f, 0f]                                      \
 }
 
@@ -86,7 +86,7 @@ execute store result storage ca:ram stack[-1].entity.transformation.translation[
 
 data modify storage ca:ram stack[-1].entity.transformation.left_rotation set from storage ca:ram stack[-2].result
 
-execute if data storage ca:ram stack[-2].test{update:true} run data modify storage ca:ram stack[-1].entity.interpolation_duration set value 0
+execute if data storage ca:ram stack[-2].test{update:true} run data modify storage ca:ram stack[-1].entity.interpolation_duration set value 1
 
 execute on passengers on passengers run data modify entity @s[type=block_display] {} merge from storage ca:ram stack[-1].entity
 
