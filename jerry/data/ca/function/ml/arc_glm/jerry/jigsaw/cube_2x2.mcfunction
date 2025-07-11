@@ -18,7 +18,7 @@ execute \
         return 1
 
 tag @a remove tmp
-execute on passengers on origin at @s positioned ~-0.5 ~ ~-0.5 run tag @a[dx=0,gamemode=!spectator,tag=!ignore] add tmp
+execute on passengers if entity @s[tag=snapped] on origin at @s positioned ~-0.5 ~ ~-0.5 run tag @a[dx=0,gamemode=!spectator,tag=!ignore] add tmp
 
 
 execute if score @s ca.ml.arc_glm.count matches ..20 at @s positioned ^ ^ ^-1 as @a[tag=tmp] run damage @s 1 minecraft:mob_projectile at ^ ^ ^-1
