@@ -63,8 +63,8 @@ execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. \
     positioned ^ ^ ^2 facing entity @s feet positioned as @s facing ^ ^ ^-1 run \
         function ca:ml/arc_glm/jerry/jigsaw/move
 
-execute if score @s ca.ml.arc_glm.jerry.lifetime matches ..240 run particle dust{color:[ 0.98039215686, 0.69019607843, 0.06666666666], scale:2} ^ ^ ^-0.2 0.5 0.5 0.5 0 5 normal @a
-execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. run particle dust{color:[ 0.98039215686, 0.26777, 0.03], scale:2} ^ ^ ^-0.2 0.5 0.5 0.5 0 10 normal @a
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches ..240 run particle dust{color:[ 0.98039215686, 0.69019607843, 0.06666666666], scale:2} ^ ^ ^-0.2 0.5 0.5 0.5 0 5 force @a
+execute if score @s ca.ml.arc_glm.jerry.lifetime matches 241.. run particle dust{color:[ 0.98039215686, 0.26777, 0.03], scale:2} ^ ^ ^-0.2 0.5 0.5 0.5 0 10 force @a
 
 execute if score #$.tmp ca.ml.arc_glm.fun matches 1 run return run function ca:ml/arc_glm/delete/jigsaw
 
