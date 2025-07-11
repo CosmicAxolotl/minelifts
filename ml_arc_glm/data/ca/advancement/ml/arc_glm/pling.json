@@ -16,7 +16,7 @@
                     }
                 },
                 "entity": {
-                    "type": "minecraft:ghast",
+                    "type": "minecraft:slime",
                     "vehicle": {
                         "nbt": "{Tags:[\"ca.ml.arc_glm.core\",\"awaken\"]}"
                     }

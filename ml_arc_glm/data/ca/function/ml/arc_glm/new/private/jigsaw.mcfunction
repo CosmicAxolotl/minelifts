@@ -13,8 +13,8 @@ data modify storage ca:ram stack[-1].jigsaw.pool.stairs append from storage ca:r
 data modify storage ca:ram stack[-1].jigsaw.pool.slab append from storage ca:ram stack[-1].jigsaw.arrangement[{type:"slab"}]
 data modify storage ca:ram stack[-1].jigsaw.pool.wall append from storage ca:ram stack[-1].jigsaw.arrangement[{type:"wall"}]
 
-execute on passengers run data modify entity @s[tag=jigsaw_information] data set from storage ca:ram stack[-1].jigsaw
 
+execute on passengers run data modify entity @s[tag=jigsaw_information] data set from storage ca:ram stack[-1].jigsaw
 
 return 1
 

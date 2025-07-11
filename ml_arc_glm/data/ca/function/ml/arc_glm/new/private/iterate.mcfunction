@@ -22,56 +22,57 @@ execute if data storage ca:ram stack[-1].block_iterated{type:"core"} \
     return run function ca:ml/arc_glm/new/private/iterate
 
 
-summon block_display ~ ~ ~ {                                \
-    Tags: ["tmp","ca.ml.arc_glm.djt_blk","snapped"],            \
-    Passengers: [                                               \
-        {                                                       \
-            id:"ghast",                                         \
-            active_effects: [                                   \
-                {                                               \
-                    duration: -1, show_icon: false,             \
-                    amplifier: 127b,                            \
-                    id: "minecraft:resistance",                 \
-                    show_particles: false                       \
-                },                                              \
-                {                                               \
-                    duration: -1, show_icon: false,             \
-                    amplifier: 127b,                            \
-                    id: "minecraft:regeneration",               \
-                    show_particles: false                       \
-                },                                              \
-                {                                               \
-                    duration: -1, show_icon: false,             \
-                    amplifier: 0b,                              \
-                    id: "minecraft:invisibility",               \
-                    show_particles: false                       \
-                },                                              \
-            ],                                                  \
-            PersistenceRequired: true,                          \
-            Silent: true,                                       \
-            Health: 1024.0f,                                    \
-            NoAI: true,                                         \
-            attributes: [                                       \
-                { id: "minecraft:max_health", base: 1024.0d },  \
-                { id: "minecraft:scale",      base: 0.25d },    \
-            ],                                                  \
-            Team: "no_collisions",                              \
-            DeathLootTable: ""                                  \
-        },                                                      \
-        {                                                       \
-        id: "minecraft:block_display",                          \
-        transformation: {                                       \
-            left_rotation:  [0f, 0f, 0f, 1f      ],             \
-            right_rotation: [ 0f,   0f,   0f,  1f],             \
-            translation:    [-.5f, -.5f, -.5f    ],             \
-            scale:          [ 1f,   1f,   1f     ]              \
-        },                                                      \
-        view_range: 0f,                                         \
-        interpolation_duration: 8,                              \
-        teleport_duration: 2,                                   \
-        start_interpolation: 0,                                 \
-        }                                                       \
-    ]                                                           \
+summon block_display ~ ~ ~ {                                                \
+    Tags: ["tmp","ca.ml.arc_glm.djt_blk","snapped"],                        \
+    Passengers: [                                                           \
+        {                                                                   \
+            id:"slime",                                                     \
+            active_effects: [                                               \
+                {                                                           \
+                    duration: -1, show_icon: false,                         \
+                    amplifier: 127b,                                        \
+                    id: "minecraft:resistance",                             \
+                    show_particles: false                                   \
+                },                                                          \
+                {                                                           \
+                    duration: -1, show_icon: false,                         \
+                    amplifier: 127b,                                        \
+                    id: "minecraft:regeneration",                           \
+                    show_particles: false                                   \
+                },                                                          \
+                {                                                           \
+                    duration: -1, show_icon: false,                         \
+                    amplifier: 0b,                                          \
+                    id: "minecraft:invisibility",                           \
+                    show_particles: false                                   \
+                },                                                          \
+            ],                                                              \
+            PersistenceRequired: true,                                      \
+            Silent: true,                                                   \
+            Health: 1024.0f,                                                \
+            NoAI: true,                                                     \
+            attributes: [                                                   \
+                { id: "minecraft:max_health", base: 1024.0d },              \
+                { id: "minecraft:scale",      base: 1.92307692308d },       \
+            ],                                                              \
+            Team: "no_collisions",                                          \
+            DeathLootTable: ""                                              \
+        },                                                                  \
+        {                                                                   \
+        id: "minecraft:block_display",                                      \
+        transformation: {                                                   \
+            left_rotation:  [0f, 0f, 0f, 1f      ],                         \
+            right_rotation: [ 0f,   0f,   0f,  1f],                         \
+            translation:    [-.5f, -.5f, -.5f    ],                         \
+            scale:          [ 1f,   1f,   1f     ]                          \
+        },                                                                  \
+        view_range: 0f,                                                     \
+        interpolation_duration: 16,                                         \
+        teleport_duration: 4,                                               \
+        start_interpolation: 0,                                             \
+        }                                                                   \
+    ],                                                                      \
+    teleport_duration: 4,                                                   \
 }
 
 execute store result score #$.list_size ca.ml.arc_glm.fun \

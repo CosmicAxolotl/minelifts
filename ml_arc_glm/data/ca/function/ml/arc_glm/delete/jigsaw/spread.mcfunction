@@ -5,7 +5,7 @@ execute store result storage ca:ram stack[-1].entity.Rotation[1] float 0.001 run
 
 execute on vehicle on origin run tag @s add tmp
 
-ride @e[type=ghast,tag=tmp,limit=1] mount @s
+ride @e[type=slime,tag=tmp,limit=1] mount @s
 execute on passengers run tag @s remove tmp
 
 tag @s remove snapped

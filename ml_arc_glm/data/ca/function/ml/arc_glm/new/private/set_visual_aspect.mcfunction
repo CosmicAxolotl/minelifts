@@ -20,4 +20,4 @@ execute \
         data modify entity @s[type=block_display] \
         block_state.Properties set from storage ca:ram stack[-1].block_iterated.block_state
 
-execute on passengers run data modify storage ca:ram stack[-1].uuid set from entity @s[type=minecraft:ghast] UUID
+execute on passengers run data modify storage ca:ram stack[-1].uuid set from entity @s[type=minecraft:slime] UUID
