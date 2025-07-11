@@ -32,7 +32,6 @@ $tag @e[tag=tmp,limit=1] add $(id)
 
 execute as @e[tag=tmp,limit=1] if function ca:ml/arc_glm/new/private/jigsaw run tag @s remove tmp
 
-
 function ca:gnr_lay/delete/ext
 
 

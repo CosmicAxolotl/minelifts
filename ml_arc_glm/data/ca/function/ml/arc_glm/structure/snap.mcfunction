@@ -1,11 +1,7 @@
 
 execute on vehicle if entity @s[tag=complete] run return fail
 
-
-
 function ca:gnr_lay/new/ext
-
-
 
 
 execute on vehicle on passengers if entity @s[tag=jigsaw_information] run \
