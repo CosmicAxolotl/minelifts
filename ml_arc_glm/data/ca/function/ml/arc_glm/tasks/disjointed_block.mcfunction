@@ -383,7 +383,7 @@ execute store result storage ca:ram stack[-1].transformation.translation[2] floa
 
 # ===============================================================================================================================
 
-execute on passengers run data modify entity @s[type=block_display] transformation merge from storage ca:ram stack[-1].transformation
+execute on passengers if entity @s[type=block_display] run data modify entity @s transformation merge from storage ca:ram stack[-1].transformation
 
 # ===============================================================================================================================
 

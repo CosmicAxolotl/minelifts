@@ -88,7 +88,7 @@ data modify storage ca:ram stack[-1].entity.transformation.left_rotation set fro
 
 execute if data storage ca:ram stack[-2].test{update:true} run data modify storage ca:ram stack[-1].entity.interpolation_duration set value 1
 
-execute on passengers on passengers run data modify entity @s[type=block_display] {} merge from storage ca:ram stack[-1].entity
+execute on passengers on passengers if entity @s[type=block_display] run data modify entity @s {} merge from storage ca:ram stack[-1].entity
 
 
 function ca:gnr_lay/delete/int
