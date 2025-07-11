@@ -45,6 +45,10 @@ tag @a remove tmp
 
 scoreboard players operation #$.id ca.ml.arc_glm.fun = @s ca.ml.arc_glm.jerry.jigsaw.linkage
 
+execute \
+    unless entity @a[tag=!ignore,predicate=ca:ml/arc_glm/jerry/linkage,limit=1] run \
+        return run function ca:ml/arc_glm/delete/jigsaw
+
 execute if score @s ca.ml.arc_glm.jerry.lifetime matches ..140 \
     at @s positioned ^ ^ ^40 \
     facing entity @a[predicate=ca:ml/arc_glm/jerry/linkage] eyes \
