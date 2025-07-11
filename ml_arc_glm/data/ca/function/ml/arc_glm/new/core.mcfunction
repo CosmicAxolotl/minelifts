@@ -60,6 +60,8 @@ execute as @e[tag=tmp,tag=jigsaw,limit=1] run function ca:ml/arc_glm/new/private
 
 data modify entity @e[tag=tmp,tag=ca.ml.arc_glm.pltf,limit=1] data set from storage ca:ram stack[-1].jigsaw
 
+scoreboard players set #$.alloc ca.ml.arc_glm.fun 0
+
 execute as @e[tag=tmp,tag=jigsaw,limit=1] at @s run function ca:ml/arc_glm/new/private/iterate
 execute store result score @e[tag=tmp,tag=ca.ml.arc_glm.pltf,limit=1] ca.ml.arc_glm.id run \
     data get storage ca:ram stack[-1].platform_id

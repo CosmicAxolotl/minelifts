@@ -11,7 +11,7 @@ execute on passengers store result score @s ca.ml.arc_glm.translation.z run data
 
 $data modify storage ca:ram stack[-1].visual_aspect.id set from storage ca:ram stack[-1].pool[$(index)]
 execute on passengers run data modify entity @s[type=block_display] block_state.Name set from storage ca:ram stack[-1].visual_aspect.id
-execute store result score @s ca.ml.arc_glm.time_existing run random value 0..7
+execute store result score @s ca.ml.arc_glm.time_existing run scoreboard players add #$.alloc ca.ml.arc_glm.fun 1
 
 
 execute \
