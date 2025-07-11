@@ -1,4 +1,6 @@
 
+execute if score @s ca.ml.arc_glm.count matches ..9 run return 1
+
 rotate @s ~ ~
 
 execute if score @s ca.ml.arc_glm.jerry.lifetime matches ..40 \
