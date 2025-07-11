@@ -19,7 +19,7 @@ scoreboard players operation @s ca.ml.arc_glm.jerry.jigsaw_torque.z /= #2 ca.ml.
 
 execute unless predicate ca:ml/arc_glm/jerry/periodic run return 1
 
-execute store result score @s ca.ml.arc_glm.jerry.jigsaw_torque.x run random value -12000..12000
-execute store result score @s ca.ml.arc_glm.jerry.jigsaw_torque.y run random value -12000..12000
-execute store result score @s ca.ml.arc_glm.jerry.jigsaw_torque.z run random value -12000..12000
+execute store result score @s ca.ml.arc_glm.jerry.jigsaw_torque.x run random value -18000..18000
+execute store result score @s ca.ml.arc_glm.jerry.jigsaw_torque.y run random value -18000..18000
+execute store result score @s ca.ml.arc_glm.jerry.jigsaw_torque.z run random value -18000..18000
 
